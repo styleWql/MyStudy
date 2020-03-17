@@ -1,0 +1,16 @@
+<!--pages/cinema/cinema.wxml-->
+<text>我是影院页面</text>
+
+<image src="{{imgUrl}}" class="imgSize"></image>
+<button bindtap="chooseImg">选择图片</button>
+<view>===========图片预览=========</view>
+
+<view>
+  <image class="imgSize" catchtap="handleView" wx:for="{{urls}}" wx:key="{{index}}" src="{{item}}" data-img="{{item}}"></image>
+</view>
+
+<button catchtap="handleAddress">选择收货地址</button>
+<button catchtap="handleCall">打电话给刘建均</button>
+<button catchtap="handleScanCode">扫码</button>
+<button catchtap="handlebrate">手机振动</button>
+<button catchtap="handleRun">微信运动</button>

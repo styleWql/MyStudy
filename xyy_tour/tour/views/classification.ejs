@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>景点分类</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel='stylesheet' href='stylesheets/classification.css' />
+    <link rel='stylesheet' href='stylesheets/style.css' />
+    <link rel='stylesheet' href='stylesheets/index.css' />
+</head>
+
+<body>
+    <% include template/header.ejs%>
+    <div role="main" class="main">
+        <div class="container mb-3">
+            <div class="search">
+                <input type="text" id="search">
+                <button type="button" class="btn btn-info" id="search_btn">搜索</button>
+            </div>
+            <hr class="online">
+            <div class="type">
+                <div class="country" id="country">
+                    按地区：<span area-id=0 class="current">全部</span>&nbsp;&nbsp;<span id="show">大陆</span>&nbsp;&nbsp;<span
+                        area-id=33>香港</span>&nbsp;&nbsp;<span area-id=32>台湾</span>
+                    <div class="city">
+                        <div style="margin-top:20px;margin-left: 20px;">
+                            <span area-id=1>北京</span><span area-id=2>天津</span><span area-id=8>河北</span><span
+                                area-id=28>四川</span><span area-id=30>云南</span><span area-id=11>浙江</span><span
+                                area-id=29>贵州</span><span area-id=4>重庆</span><span area-id=31>海南</span><span
+                                area-id=16>安徽</span><span area-id=12>福建</span><span area-id=20>甘肃</span><span
+                                area-id=18>广东</span><span area-id=19>广西</span><span area-id=13>河南</span><span
+                                area-id=6>黑龙江</span><span area-id=14>湖北</span><span area-id=15>湖南</span><span
+                                area-id=7>吉林</span><span area-id=10>江苏</span><span area-id=17>江西</span><span
+                                area-id=5>辽宁</span><span area-id=23>内蒙古</span><span area-id=21>宁夏</span><span
+                                area-id=26>青海</span><span area-id=9>山东</span><span area-id=22>山西</span><span
+                                area-id=24>陕西</span><span area-id=3>上海</span><span area-id=27>西藏</span><span
+                                area-id=25>新疆</span><span area-id=34>澳门</span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="online">
+                <div class="category">
+                    按类别：<span type-id=0 class="current">全部</span>&nbsp;&nbsp;<span
+                        type-id=1>人文景观</span>&nbsp;&nbsp;<span type-id=2>自然景观</span>
+                </div>
+                <hr class="online">
+                <div class="level">
+                    按级别：<span level-id=0 class="current">全部</span>&nbsp;&nbsp;<span
+                        level-id=3>AAAAA</span>&nbsp;&nbsp;<span level-id=2>AAAA</span> &nbsp;&nbsp;<span
+                        level-id=1>AAA</span>
+                </div>
+            </div>
+            <hr class="online">
+        </div>
+        <div class="container marketing">
+            <div class="row d-flex justify-content-start" id="viewBox">
+
+            </div><!-- 渲染card -->
+            <div id="pageBox">
+
+            </div><!-- 分页end -->
+        </div>
+    </div>
+    <div class="position-fixed div_bot"><img src="/com_img/返回顶部.png" alt=""></div>
+    <% include template/footer.ejs%>
+    <script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.js'></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/classification.js"></script>
+    <script src="javascript/header.js"></script>
+    
+</body>
+
+</html>

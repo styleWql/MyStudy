@@ -1,0 +1,21 @@
+<!-- 轮播 -->
+<view class="main">
+  <view class="cityBox" catchtap="handleOpenLoction">{{city}}</view>
+  <swiper class="swiperBox" current="1" class="swiperBox" indicator-dots indicator-active-color="#fff" circular>
+    <swiper-item wx:for="{{bannerObj.data}}" wx:key="bannerId">
+      <image src="{{item.imgUrl}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- <button catchtap="SelectLocation">选择位置</button> -->
+  <!-- 导航 -->
+  <view class="nav">
+    <view catchtap="handleNavChange" data-type="1" class="nav-item {{filmParams.type==1?'active':''}}">正在热映</view>
+    <view catchtap="handleNavChange" data-type="2" class="nav-item {{filmParams.type==2?'active':''}}">即将上映</view>
+    <view class="ink-bar" style="left:{{filmParams.type==1?'17.5%':'67.5%'}}"></view>
+  </view>
+
+  <!-- 电影列表 -->
+  <view>
+     <film-item bindtap="handleDetail" data-film="{{item}}" wx:for="{{filmList}}" film="{{item}}" wx:key="filmId"></film-item>
+  </view>
+</view>

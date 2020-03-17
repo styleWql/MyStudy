@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.content a{
+    color: deepskyblue;
+}
+
+.w-33{
+    width: 33%;
+    height: 350px;
+}
+
+.content{
+    width: 1200px;
+}
+
+textarea{
+    padding: 10px;
+}
+
+.comm{
+    border-bottom: 2px solid gray;
+}
+
+.c_head{
+    overflow: hidden;
+}
+
+.head_img{
+    width: 60px;
+    height: 60px;
+}
+
+.head_img>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.c_content_img_zz{
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    left: 0;
+    top: 10%;
+}
+.c_content_operate{
+    overflow: hidden;
+}
+
+.c_content_operate img{
+    width: 20px;
+    cursor: pointer;
+}
+
+.chat{
+    display: none;
+    background-color: #dcdcdc30;
+}
+
+.chat_text{
+    height: 100px;
+}
+
+.chat_btn{
+    overflow: hidden;
+}
+
+.chat_btn>div{
+    align-items: center;
+}
+.chat_friend>li{
+    overflow: hidden;
+}
+
+.chat_friend_headImg{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.c_head_main img{
+    width: 20px;
+}
+
+.chat_friend_headImg>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.chat_p{
+    width: 75%;
+}
+
+#toast{
+    padding: 5px 10px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,.8);
+    display: none;
+    z-index: 999;
+}
+
+.atr_bt{
+    color: dimgray;
+    text-align: center;
+}
+
+.div_bot{
+    width: 50px;
+    height: 50px;
+    background-color: deepskyblue;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    right: 20px;
+    bottom: 50px;
+    box-shadow: 1px 4px 9px 1px rgba(66, 66, 66, .5);
+    cursor: pointer;
+    z-index: 666;
+}
+
+.div_bot:hover{
+    transform: translate(-1px,-1px);
+}
+
+.div_bot>img{
+    width: 30px;
+}

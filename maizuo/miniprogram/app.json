@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/films/films",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/login/login",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room",
+    "pages/cinema/cinema",
+    "pages/count/conut",
+    "pages/information/information"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff5f16",
+    "navigationBarTitleText": "卖座网",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ff5f16d9",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 20,
+    "pageOrientation": "auto"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#797d82",
+    "backgroundColor": "#fff",
+    "selectedColor": "#ff5f16",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/films/films",
+        "text": "电影",
+        "iconPath": "public/image/tabBar/films.png",
+        "selectedIconPath": "public/image/tabBar/films (1).png"
+      },
+      {
+        "pagePath": "pages/cinema/cinema",
+        "text": "影院",
+        "iconPath": "public/image/tabBar/cinema.png",
+        "selectedIconPath": "public/image/tabBar/cinema(1).png"
+      },
+      {
+        "pagePath": "pages/information/information",
+        "text": "资讯",
+        "iconPath": "public/image/tabBar/information.png",
+        "selectedIconPath": "public/image/tabBar/information (1).png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "public/image/tabBar/my.png",
+        "selectedIconPath": "public/image/tabBar/my (1).png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx1c7db373636d05e3"
+  ]
+}

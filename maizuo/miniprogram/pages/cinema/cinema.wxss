@@ -1,0 +1,5 @@
+/* pages/cinema/cinema.wxss */
+.imgSize{
+  width: 33%;
+  height: 100px
+}

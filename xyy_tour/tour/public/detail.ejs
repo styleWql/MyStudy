@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/detail.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+  </head>
+  <body>
+    <!-- <div class="container-sm border border-primary">100% wide until small breakpoint</div> -->
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <div class="container border z_border" style="padding: 0px;">
+      <div class="box">
+        <span></span>
+        <img src="/detail_img/001.jpg" alt="">
+        <div class="text">天门中断楚江开，碧水东流至此回。</div>
+      </div>
+      <div class="box">
+        <span></span>
+          <div class="text" style="text-align: right;">日照香炉生紫烟，遥看瀑布挂前川。</div>
+        <img src="/detail_img/002.jpg" alt="">
+      </div>
+      <div class="box">
+        <span></span>
+        <img src="/detail_img/003.jpg" alt="">
+        <div class="text">朝辞白帝彩云间，千里江陵一日还。</div>
+      </div>
+      <div class="box">
+        <span></span>
+          <div class="text" style="text-align: right;">遥望洞庭山水翠，白银盘里一青螺。</div>
+          <img src="/detail_img/004.jpg" alt="">
+      </div>
+      <div class="comment">
+        <!-- 发布 -->
+        <div class="release">
+          <img class="h_img" src="/detail_img/005.jpg" alt="">
+          <!-- <input class="put_box" type="text"> -->
+          <textarea id="t_area"  class="put_box" name="" id="" cols="30" rows="10"></textarea>
+          <button id="btn" class="btn btn-primary p_comment">发表评论</button>
+        </div>
+        <div  class="com_number" >
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      let arr = []
+      let str = ''
+      let node_str= ''
+      let time = " "
+      let num = 0
+    $(btn).click(function(){
+      str = $(t_area).val()
+      arr.push(str)
+      $(t_area).val(" ")
+      time = new Date().toLocaleString()
+      node_str = $(`<div class='new'>  
+      <img class="h_img" src="/detail_img/005.jpg" alt="">
+      <div class="father">
+      <div class="title"> 用户名： </div>
+      <div class="put_box msg">${str}</div>
+      <div class="like">
+    <span> ${time}</span>
+    <span id='like'>❤:1</span>
+    <span>回复</span>
+        
+      </div>
+      </div>
+                    </div>`)
+     $(".com_number").prepend(node_str)
+      // console.log(arr);
+    })
+    $(".com_number").click(function(e){
+      // console.dir(e.target);
+      if(e.target.id == "like"){
+        console.log(1);
+      }
+    })
+    </script>
+  </body>
+</html>

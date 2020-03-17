@@ -1,0 +1,3 @@
+<view>
+<button size="mini" catchtap="handleCount" data-type="sub">--</button>{{num}}<button size="mini" catchtap="handleCount" data-type="add">++</button>
+</view>

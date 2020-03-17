@@ -1,0 +1,613 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* outline: 1px solid; */
+    /* overflow: hidden; */
+}
+/* -----------头部视频----------------- */
+.top_yz{
+    max-width: 1560px;
+    /* height: 560px; */
+    margin: 0 auto ; 
+    padding: 0 15px;
+    margin-top: 190px;
+}
+.top_yz-ul{
+    list-style: none;
+    display: flex;
+}
+.top_yz-ul li:nth-of-type(1){
+    width: 995px;
+    height: 560px;
+    background-color: rgb(0, 0, 0);
+}
+.top_yz-ul li:nth-of-type(1) video{
+    width: 100%;
+    height: 100%;
+}
+.top_yz-ul li:nth-of-type(2){
+    width: 535px;
+    height: 560px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 4px gainsboro;
+}
+.top_yz-ul li:nth-of-type(2) span{
+    font-size: 22px;
+    display: block;
+    margin-bottom: 16px;
+}
+.top_yz-ul li:nth-of-type(2) a{
+    display: block;
+    width: 130px;
+    height: 30px;
+    color: black;
+    background: #ff7e00;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* --------------第二部分---------------- */
+
+.two{
+    max-width: 1560px;
+    height: 602px;
+    margin: 90px auto 60px; 
+    padding: 0 15px;
+    /* background-color: rgb(170, 132, 132); */
+}
+.two h2{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.two-ul{
+    list-style: none;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    
+}
+.two-ul li{
+    width: 360px;
+    height: 560px;
+    margin-left: 30px;
+    transition: .3s;
+}
+.two-ul li:nth-of-type(1){
+    margin: 0;
+}
+.two-ul li a{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+/* ---------第一个li里的第一个a-------------------- */
+.two-ul li a:nth-of-type(1){
+    width: 100%;
+    height: 64%;
+    background-color: red;
+    position: relative;
+    box-shadow: 1px 1px 4px gainsboro;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+}
+.two-ul li a:nth-of-type(1) img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#play{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    bottom: -5%;
+}
+#play img{
+    width: 80%;
+    height:80%;
+    margin: 10%;
+}
+/* .two-ul li a:nth-of-type(1)::after{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../img-yz/Play.png) no-repeat;
+    background-position: 50% 50%;
+    background-color: #fff;
+    position: absolute;
+    background-size: 80%;
+    border-radius: 50%;
+    bottom: -20px;
+    left: 160px;
+    z-index: 2;
+
+} */
+/* ---------第一个li里的第二个a-------------------- */
+
+.two-ul li a:nth-of-type(2){
+    width: 100%;
+    height: 28%;
+    /* background-color: rgb(49, 37, 37); */
+    transition: .4s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 1px 1px 4px gainsboro;
+
+}
+.two-ul li a:nth-of-type(2) span{
+    display: block;
+    margin: 10px 0;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+}
+/* --------------第一个span-------------- */
+.two-ul li a:nth-of-type(2) span:nth-of-type(1){
+    margin: 30px 0 5px;
+}
+/* --------------第二个span-------------- */
+.two-ul li a:nth-of-type(2) span:nth-of-type(2){
+    margin: 0;
+    font-size: 16px;
+    color: #2c2c2c;
+    /* margin-top: 40px; */
+}
+/* --------------第三个span-------------- */
+.two-ul li a:nth-of-type(2) span:nth-of-type(3){
+    font-size: 16px;
+    color: #2c2c2c;
+}
+/* --------------第四个span-------------- */
+.two-ul li a:nth-of-type(2) span:nth-of-type(4){
+    opacity: 0;
+    transition: .3s;
+    text-decoration: underline;
+    margin-top: 25px;
+    font-size: 12px;
+    /* position: absolute;
+    bottom: 20px; */
+}
+.two-ul li:hover a:nth-of-type(2) span:nth-of-type(4){
+    opacity: 1;
+}
+
+/* ---------第二个a的hover-------------. */
+.two-ul li:hover a:nth-of-type(2){
+    height: 37%;
+}
+
+
+/* ----------------第三部分-------------- */
+
+.three{
+    max-width: 1560px;
+    height: 602px;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* background-color: rgb(170, 132, 132); */
+}
+.three h2{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.three-ul{
+    list-style: none;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    
+}
+.three-ul li{
+    width: 490px;
+    height: 602px;
+    margin-left: 30px;
+    transition: .3s;
+}
+.three-ul li:nth-of-type(1){
+    margin: 0;
+}
+.three-ul li a{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+/* ---------第一个li里的第一个a-------------------- */
+.three-ul li a:nth-of-type(1){
+    width: 100%;
+    height: 64%;
+    background-color: red;
+    position: relative;
+    box-shadow: 1px 1px 4px gainsboro;
+}
+.three-ul li a:nth-of-type(1) img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#play{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    bottom: -5%;
+}
+#play img{
+    width: 80%;
+    height:80%;
+    margin: 10%;
+}
+
+/* .three-ul li a:nth-of-type(1)::after{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../img-yz/Play.png) no-repeat;
+    background-position: 50% 50%;
+    background-color: #fff;
+    position: absolute;
+    background-size: 80%;
+    border-radius: 50%;
+    bottom: -20px;
+    left: 227px;
+    z-index: 2;
+
+} */
+/* ---------第一个li里的第二个a-------------------- */
+
+.three-ul li a:nth-of-type(2){
+    width: 100%;
+    height: 28%;
+    /* background-color: rgb(49, 37, 37); */
+    transition: .4s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 1px 1px 4px gainsboro;
+
+}
+.three-ul li a:nth-of-type(2) span{
+    display: block;
+    margin: 10px 0;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+}
+/* --------------第一个span-------------- */
+.three-ul li a:nth-of-type(2) span:nth-of-type(1){
+    margin: 30px 0 5px;
+}
+/* --------------第二个span-------------- */
+.three-ul li a:nth-of-type(2) span:nth-of-type(2){
+    font-size: 16px;
+    color: #2c2c2c;
+}
+/* --------------第三个span-------------- */
+.three-ul li a:nth-of-type(2) span:nth-of-type(3){
+    font-size: 16px;
+    color: #2c2c2c;
+}
+/* --------------第四个span-------------- */
+.three-ul li a:nth-of-type(2) span:nth-of-type(4){
+    opacity: 0;
+    transition: .3s;
+    text-decoration: underline;
+    margin-top: 25px;
+    font-size: 12px;
+    /* position: absolute;
+    bottom: 20px; */
+}
+.three-ul li:hover a:nth-of-type(2) span:nth-of-type(4){
+    opacity: 1;
+}
+/* ---------第二个a的hover-------------. */
+.three-ul li:hover a:nth-of-type(2){
+    height: 37%;
+}
+
+
+/* --------------第四部分---------------- */
+
+.th{
+    max-width: 1560px;
+    height: 602px;
+    margin: 0 auto 40px;
+    padding: 0 15px;
+    /* background-color: rgb(170, 132, 132); */
+}
+.th h2{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.th-ul{
+    list-style: none;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    
+}
+.th-ul li{
+    width: 490px;
+    height: 602px;
+    margin-left: 30px;
+    transition: .3s;
+}
+.th-ul li:nth-of-type(1){
+    margin: 0;
+}
+.th-ul li a{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+/* ---------第一个li里的第一个a-------------------- */
+.th-ul li a:nth-of-type(1){
+    width: 100%;
+    height: 64%;
+    background-color: red;
+    position: relative;
+    box-shadow: 1px 1px 4px gainsboro;
+}
+.th-ul li a:nth-of-type(1) img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#play{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    bottom: -5%;
+}
+#play img{
+    width: 80%;
+    height:80%;
+    margin: 10%;
+}
+
+/* .th-ul li a:nth-of-type(1)::after{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../img-yz/Play.png) no-repeat;
+    background-position: 50% 50%;
+    background-color: #fff;
+    position: absolute;
+    background-size: 80%;
+    border-radius: 50%;
+    bottom: -20px;
+    left: 227px;
+    z-index: 2;
+
+} */
+/* ---------第一个li里的第二个a-------------------- */
+
+.th-ul li a:nth-of-type(2){
+    width: 100%;
+    height: 28%;
+    /* background-color: rgb(49, 37, 37); */
+    transition: .4s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 1px 1px 4px gainsboro;
+
+}
+.th-ul li a:nth-of-type(2) span{
+    display: block;
+    margin: 10px 0;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+}
+/* --------------第一个span-------------- */
+.th-ul li a:nth-of-type(2) span:nth-of-type(1){
+    margin: 30px 0 5px;
+}
+/* --------------第二个span-------------- */
+.th-ul li a:nth-of-type(2) span:nth-of-type(2){
+    font-size: 16px;
+    color: #2c2c2c;
+}
+/* --------------第三个span-------------- */
+.th-ul li a:nth-of-type(2) span:nth-of-type(3){
+    font-size: 16px;
+    color: #2c2c2c;
+}
+/* --------------第四个span-------------- */
+.th-ul li a:nth-of-type(2) span:nth-of-type(4){
+    opacity: 0;
+    transition: .3s;
+    text-decoration: underline;
+    margin-top: 25px;
+    font-size: 12px;
+    /* position: absolute;
+    bottom: 20px; */
+}
+.th-ul li:hover a:nth-of-type(2) span:nth-of-type(4){
+    opacity: 1;
+}
+/* ---------第二个a的hover-------------. */
+.th-ul li:hover a:nth-of-type(2){
+    height: 37%;
+}
+/* ----------------------------第七部分------------------------- */
+
+.seven{
+    max-width: 1560px;
+    height: 777px;
+    margin: 70px auto 0;
+    padding: 0 15px;
+    /* background-color: rgb(170, 132, 132); */
+}
+.seven h2{
+    font-size: 16px;
+    margin: 0 0 20px;
+}
+
+.seven-ul{
+    list-style: none;
+    height: 731px;
+}
+.seven-ul li{
+    max-width: 1530px;
+    height: 134px;
+    margin-bottom: 20px;
+    /* background-color: rgb(105, 93, 93); */
+    
+}
+.seven-ul a{
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 1px 1px 4px gainsboro;
+}
+.seven-ul li span{
+    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+}
+/* -----------------第一个图---------------- */
+.seven-ul li span:nth-of-type(1){
+    width: 179px;
+    height: 134px;
+}
+.seven-ul li span:nth-of-type(1) img{
+    width: 100%;
+    height: 100%;
+}
+/* -----------------第二个图---------------- */
+
+.seven-ul li span:nth-of-type(2){
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    border-radius: 50%;
+}
+.seven-ul li span:nth-of-type(2) img{
+    width: 80%;
+    height:80%;
+    margin: 10%;
+}
+/* ---------------第三个span----------------- */
+.seven-ul li span:nth-of-type(3){
+    margin-left: 40px;
+}
+.seven-ul li span:nth-of-type(3) p:nth-of-type(2){
+    font-size: 16px;
+}
+/* ---------------第四个span----------------- */
+.seven-ul li span:nth-of-type(4){
+    font-size: 12px;
+    opacity: 0;
+    transition: .3s;
+    position: absolute;
+    right: 20px;
+    text-decoration: underline;
+}
+.seven-ul li:hover span:nth-of-type(4){
+opacity: 1;
+}
+
+
+
+/* --------------第八部分---------------- */
+.upper{
+    box-sizing: border-box;
+    max-width: 1560px;
+    height: 240px;
+    margin: 90px auto 30px; 
+    padding: 70px 45px;
+    display: flex;
+    justify-content: space-between;
+    background: #f8bd55;
+    margin-bottom: 30px;
+}
+.upper div span{
+    display: block;
+}
+.let{
+    box-sizing: border-box;
+    width: 735px;
+    height: 99px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.let span:nth-of-type(1){
+    font-size: 14px;
+}
+.let span:nth-of-type(2){
+    font-size: 12px;
+    margin: 20px 0;
+}
+.let span:nth-of-type(3){
+    width: 100%;
+    height: 1px;
+    background: #000;
+}
+.rig{
+    box-sizing: border-box;
+    width: 335px;
+    height: 69px;
+    display: flex;
+    margin-top: 25px;
+    flex-flow: column;
+    /* justify-content: center; */
+    align-items: center;
+ 
+   
+}
+.rig a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+.rig span{
+    text-align: center;
+    /* margin-top: 10%; */
+    font-size: 14px;
+}
+
+.line{
+    max-width: 1560px;
+    height: 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eeedeb;
+}

@@ -1,0 +1,45 @@
+/* miniprogram/pages/login/login.wxss */
+
+.logBox {
+  margin: 79px auto 40px;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+
+.logBox image {
+  width: 60px;
+  height: 60px;
+}
+
+.loginBox {
+  padding: 0 20px;
+}
+
+.loginBox view {
+  margin-top: 10px;
+  color: #191a1b;
+}
+
+.loginBox input {
+  border-bottom: 1px solid gainsboro;
+  padding: 2px 10px;
+  margin-top: 5px;
+}
+
+.btnBox{
+  padding: 0 10px;
+}
+
+.btn_login {
+  width: 100% !important;
+  height: 44px;
+  line-height: 30px;
+  font-size: 16px;
+  margin: 70px 25px 0;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #ff5f16;
+  color: #fff;
+  border: none;
+}

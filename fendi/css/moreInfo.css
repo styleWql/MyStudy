@@ -1,0 +1,141 @@
+.fullScreen{
+	width: 100%;
+	height: auto;
+}
+
+/* 导航宽度 */
+.Nav_center{
+	max-width: 1560px;
+	margin: 0 auto;
+}
+
+/* 主体 页脚宽度 */
+.Cen_center{
+	max-width: 1530px;
+	margin: 0 auto;
+}
+
+/* 弹性垂直居中 */
+.Vertical_centering{
+	display: flex;
+	align-items: center;
+}
+
+/* 弹性水平居中 */
+.Horizontally_centered{
+	display: flex;
+	justify-content: center;
+}
+
+/* 弹性居中 */
+.Centered{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 弹性均匀分布 */
+.Evenly_distributed{
+	display: flex;
+	justify-content: space-around;
+}
+
+/* 弹性两边均匀分布 */
+.Evenly_distributed_two{
+	display: flex;
+	justify-content: space-between;
+}
+
+/* 字体加粗 */
+.font_b{
+	font-weight: bold;
+}
+
+/* 更多信息主体 */
+.content{
+	/* height: 500px;
+	background-color: salmon; */
+	overflow: hidden;
+	font-size: 12px;
+	color: #212121;
+	padding: 30px 10px 100px;
+	border-bottom: 1px solid #eeedeb;
+	box-sizing: border-box;
+}
+
+.moreInfo_ul_one{
+	float: left;
+	width: 28.9%;
+}
+
+.moreInfo_ul_one a{
+	color: #71716F;
+	font-weight: bold;
+}
+
+.moreInfo_ul_one>li{
+	height: 50px;
+	border-bottom: 1px solid #d2d0cc;
+	box-sizing: border-box;
+	background-color: #eeedeb;
+	overflow: hidden;
+}
+
+.moreInfo_ul_one span{
+	width: 1%;
+	height: 100%;
+	background-color: #F9B949;
+	display: inline-block;
+	float: left;
+}
+
+.moreInfo_ul_one a{
+	line-height: 50px;
+	display: inline-block;
+	width: 94%;
+	height: 100%;
+	padding-left: 5%;
+	float: left;
+}
+
+.moreInfo_ul_two{
+	width: 69.6%;
+	float: right;
+}
+
+.moreInfo_ul_two>li:nth-of-type(1){
+	font-size: 16px;
+}
+
+.moreInfo_ul_two>li:nth-of-type(2){
+	padding: 10px 0 30px;
+}
+
+.moreInfo_ul_two-ul{
+	overflow: hidden;
+}
+
+.moreInfo_ul_two-ul>li{
+	width: 48%;
+}
+
+.moreInfo_ul_two-ul>li:nth-of-type(1){
+	float: left;
+}
+
+.moreInfo_ul_two-ul>li:nth-of-type(2){
+	float: right;
+}
+
+.moreInfo_ul_two-ul-one>li:nth-of-type(1){
+	padding-bottom: 10px;
+}
+
+.moreInfo_ul_two-ul select{
+	width: 100%;
+	height: 38px;
+	padding: 0 10px;
+	border: none;
+	background-color: #eeedeb;
+	outline: none;
+}

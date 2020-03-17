@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.15;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h2{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+p{
+    line-height: 1.5;
+    font-weight: 400;
+}
+.main .a{
+    width: 266px;
+}
+.a{
+    display: inline-block;
+    margin: 0 ;
+    width: 128px;
+    height: 30px;
+    background-color:#f9b949;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: .2s linear;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 701;
+    cursor: pointer;
+}
+.a:hover{
+    background-color: #fdce86;
+}
+/* 以上为字体样式 */
+#content{
+    max-width: 1530px;
+    margin: 0 auto;
+    /* margin-top: 150px; */
+    text-align: center;
+	border-bottom: 1px solid #EEEDEB;
+}
+.main{
+    padding: 15px 0;
+}
+.minor{
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.pic{
+    overflow: hidden;
+}
+.pic{
+    height: 563px;
+}
+.minor img{
+    width: 100%;
+    transition: 1s;
+}
+.minor img:hover{
+    transform: scale(1.1)
+}
+.BABY{
+    max-width: 1530px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.intro{
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+.intro span{
+    position: absolute;
+    top: 434px;
+    right: -73px;
+}
+.intro h2{
+    margin-top: 433px;
+}
+.img{
+    width: 50%;
+}
+.img img{
+    width: 100%;
+}
+/* 以上为内容样式 */

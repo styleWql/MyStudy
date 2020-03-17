@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "film-item":"../../public/components/filmitem/filmitem"
+  },
+  "navigationBarTitleText": "电影"
+}

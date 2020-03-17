@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <input accept="image/*"  type="file" id="uploadIMG"  onchange="btnUploadFile(event)"/>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    function btnUploadFile(e){
+        
+ var imgFile = e.target.files[0]; //获取图片文件
+ var formData = new FormData();  // 创建form对象
+ formData.append('file', imgFile);  // 通过append向form对象添加数据
+ console.log(formData);
+ 
+ formData.append('other', 'other')  // 如果还需要传替他参数的话
+ $.ajax({
+     url: `/getimg.jsp?formData=${formData}`, //请求的接口地址
+     type: 'GET',
+     cache: false, //上传文件不需要缓存
+     data: formData,
+     processData: false, // 不要去处理发送的数据
+     contentType: false, // 不要去设置Content-Type请求头
+     success: function(data){
+         console.log(data);
+         
+     },
+     error: function(err){
+         console.log(err)
+     }
+ })
+  
+ }
+    </script>
+  </body>
+</html>

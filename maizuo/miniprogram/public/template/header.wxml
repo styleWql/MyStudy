@@ -1,0 +1,7 @@
+<!--public/template/header.wxml-->
+<!-- 模板 -->
+<template name="header">
+  <view class="header">
+    <text> 我喜欢吃：{{likeFruit}} </text>
+  </view>
+</template>

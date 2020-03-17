@@ -1,0 +1,46 @@
+.nowPlayingFilm-item {
+  padding: 15px;
+  display: flex;
+  position: relative;
+}
+
+.nowPlayingFilm-item image {
+  height: 198rpx;
+  width: 132rpx;
+  margin-right: 8px;
+}
+
+.nowPlayingFilm-info {
+  flex: 1;
+  padding-right: 54px;
+  box-sizing: border-box;
+  color: #797d82;
+  font: 13px;
+}
+
+.nowPlayingFilm-item button {
+  position: absolute;
+  right: 15px;
+  top: 50px;
+  font-size: 12px;
+}
+
+.score {
+  color: #ffb232;
+}
+
+.title{
+  color: black;
+}
+
+.wrapP {
+  display: block;
+  width: 350rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btnp{
+  color:#ff5f16;
+}

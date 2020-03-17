@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.15;
+    font-family: proximanova,PingFangSC-Regular,Microsoft YaHei,STXihei,PingFangSC,Helvetica,Arial !important;
+}
+h2{
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 160px;
+    margin-bottom: 20px;
+}
+.H2{
+    margin-top: -5px;
+}
+p{
+    line-height: 1.5;
+    font-weight: 400;
+}
+.a{
+    display: inline-block;
+    margin: 0 10px;
+    width: 128px;
+    height: 40px;
+    margin-top: 25px;
+    background-color:#f9b949;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    transition: .2s linear;
+    font-size: 12px;
+    cursor: pointer;
+}
+.a:hover{
+    background-color: #fdce86;
+}
+/* 以上为文字内容的样式 */
+#content{
+    max-width: 1530px;
+    margin: 0 auto;
+    border-bottom: 1px solid #EEEDEB;
+	overflow: hidden;
+}
+.roll{
+    max-width: 1530px;
+    height: 680px;
+    margin: 0 auto;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+.pic{
+    width: 100%;
+    height:100%;
+    filter: blur(3px);
+    position: absolute;
+    left: 0;
+    z-index: -10;
+}
+.pic1{
+    opacity: 1;
+    animation: bgfir 8.2s linear infinite alternate;
+}
+.pic2{
+    opacity: 0;
+    animation: bgsec 8.2s linear infinite alternate;
+}
+.pic3{
+    opacity: 0;
+    animation: bgthr 8.2s linear infinite alternate;
+}
+/* 以上为虚化的背景图 */
+.whiteboard{
+    max-width: 1472px;
+    height: 620px;
+    margin: 30px auto;
+    background-color: white;
+    position: relative;
+}
+.titles p{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: 30px 20px;
+    transition: .2s linear;
+    font-size: 12px;
+}
+.botton1{
+    border-bottom:1px solid #f9b949;
+    animation: txtfir 8.2s linear infinite alternate;
+}
+.botton2{
+   color: #82817F;
+   animation: txtsec 8.2s linear infinite alternate;
+}
+.botton3{
+    color: #82817F;
+    animation: txtthr 8.2s linear infinite alternate;
+}
+/* 以上为导航的样式 */
+.show{
+    max-width: 1354px;
+    height: 490px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.shows{
+    width: 4062px;
+    height: 490px;
+    display: flex;
+    position: absolute;
+    left: 0px;
+    animation: shows 8.2s linear infinite alternate;
+}
+.picArea{
+    width: 920px;
+    height: 490px;
+    padding: 0 15px;
+    background-color:white;
+}
+.picArea>img{
+   height: 100%;
+   width: 100%;
+}
+.describe{
+    width: 434px;
+    height: 490px;
+    background-color: white;
+}
+.content{
+    width: 300px;
+    display: inline-block;
+    padding: 0 5%;
+    position: relative;
+}
+.content span{
+    position: absolute;
+    left: -153px;
+    top:230px;
+}
+/* 以上为主体部分的样式 */
+.wraper{
+    position: absolute;
+    top: 125px;
+    left: 60px;
+    width: 2670px;
+    display: flex;
+    z-index: 0;
+    animation: wraper 8.2s linear infinite alternate;
+}
+.wrap{
+    width: 660px;
+    height: 400px;
+    margin-right: 20px;
+    /* background-color: aqua; */
+}
+.wrap>img{
+    height: 100%;
+    width:100%;
+}
+/* 以上为两旁动画的样式 */
+@keyframes shows{
+    0%{
+        left: 0;
+    }
+    24%{
+        left: 0;
+    }
+    25%{
+        left:-1354px;
+    }
+    75%{
+        left: -1354px;
+    }
+    76%{
+        left: -2706px;
+    }
+    100%{
+        left: -2706px;
+    }
+
+}
+@keyframes wraper{
+    0%{
+        left: 370px;
+    }
+    26%{
+        left: 370px;
+    }
+    28%{
+        left: -270px;
+    }
+    77%{
+        left:-270px;
+    }
+    79%{
+        left: -920px;
+    }
+    100%{
+        left: -920px;
+    }
+}
+@keyframes bgfir{
+    0%{
+        opacity: 1;
+    }
+    26%{
+        opacity: 1;
+    }
+    28%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bgsec{
+    0%{
+        opacity: 0;
+    }
+    26%{
+        opacity: 0;
+    }
+    28%{
+        opacity: 1;
+    }
+    77%{
+        opacity: 1;
+    }
+    79%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes bgthr{
+    0%{
+        opacity: 0;
+    }
+    77%{
+        opacity: 0;
+    }
+    79%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes txtfir{
+    0%{
+        border-bottom:1px solid #f9b949;
+    }
+    24%{
+        border-bottom:1px solid #f9b949;
+    }
+    25%{
+        color: #82817F;
+        border-bottom:1px solid white;
+    }
+    100%{
+        color: #82817F;
+        border-bottom:1px solid white;
+    }
+}
+@keyframes txtsec{
+    0%{
+        color: #82817F;
+        border-bottom:1px solid white;
+    }
+    24%{
+        color: #82817F;
+        border-bottom:1px solid white;
+    }
+    25%{
+        color: black;
+        border-bottom:1px solid #f9b949;
+    }
+    75%{
+        color: black;
+        border-bottom:1px solid #f9b949;
+    }
+    76%{
+        color: #82817F;
+        border-bottom:1px solid white;
+    }
+    100%{
+        color: #82817F;
+        border-bottom:1px solid white;
+    }
+}
+@keyframes txtthr{
+    0%{
+        color: #82817F;
+        border-bottom:1px solid white;
+    }
+    75%{
+        color: #82817F;
+        border-bottom:1px solid white;
+    }
+    76%{
+        color: black;
+        border-bottom:1px solid #f9b949;
+    }
+    100%{
+        color: black;
+        border-bottom:1px solid #f9b949;
+    }
+}
+/* 以上分别为主体，两旁，背景，导航的动画 */
+.order{
+    max-width: 1530px;
+    margin: 50px auto;
+    text-align: center;
+}
+.order img{
+    width: 100%;
+}
+.order h2{
+    margin-top: 25px;
+}
+/* 手工定制栏目 */
+.fur{
+    max-width: 1530px;
+    height: 734.5px;
+    margin: 30px auto;
+    display: flex;
+    overflow: hidden;
+}
+.furtxt{
+    width: 796px;
+    text-align: center;
+    position: relative;
+}
+.furtxt span{
+    position: absolute;
+    right:-76px;
+    top: 367px;
+}
+.furtxt h2{
+    margin-top: 300px;
+}
+.furpic{
+    width: 734.5px;
+    height: 734.5px;
+    overflow: hidden;
+}
+.furpic img{
+    height: 113%;
+}
+/* 皮草栏目 */

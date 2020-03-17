@@ -1,0 +1,1030 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "楷体";
+}
+
+li {
+	list-style: none;
+}
+
+h1 {
+	color: whitesmoke;
+	font-family: "楷体";
+	font-size: 42px;
+}
+
+span {
+	color: #28583fc7;
+}
+
+span span {
+	color: #a86e27;
+}
+
+.posi_center {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.dis_center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+}
+
+.btn {
+	width: 100px;
+	height: 40px;
+	background-color: #42BBEB;
+	border-radius: 5px;
+	color: wheat;
+	border: none;
+	outline: none;
+	float: right;
+	cursor: pointer;
+}
+
+.content {
+	width: 100%;
+	/* min_height: 700px; */
+	height: 100vh;
+	background-image: url(../img/char/char_img01.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.main_box {
+	width: 300px;
+	border-radius: 15px;
+	box-shadow: 0px 4px 9px 5px rgba(66, 66, 66, .5);
+	position: relative;
+	overflow: hidden;
+	/* background-image: url(../img/pf/pf01.jpg); */
+}
+
+.header {
+	background-color: #d9d2c0bd;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 120px;
+}
+
+.move {
+	width: 100%;
+	height: 20px;
+	cursor: move;
+	/* background-color: saddlebrown; */
+}
+
+.header_main {
+	padding: 0 10px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header_left {
+	float: left;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.online {
+	position: absolute;
+	right: 0px;
+	bottom: 6px;
+	width: 15px;
+	height: 15px;
+	background-color: #47d247f5;
+	border-radius: 50%;
+}
+
+.gx {
+	width: 150px;
+	float: left;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+}
+
+.uname {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.gx>p {
+	width: 150px;
+	font-size: 14px;
+	margin-top: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.header_right {
+	float: right;
+	height: 100%;
+	cursor: pointer;
+}
+
+.header_right i:hover {
+	color: gray;
+}
+
+.tx {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: wheat;
+}
+
+.tx>img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+/* 主体 */
+.body {
+	width: 100%;
+	height: 450px;
+	margin-top: 120px;
+	/* background: url(../img/pf/pf01.jpg); */
+	background-color: white;
+	background-size: 100% 100%;
+	cursor: pointer;
+	color: #000000eb;
+}
+
+.body_div {
+	position: relative;
+}
+
+.body_div>div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+
+.char_div {
+	background-color: #f8f8f8f2;
+	display: none;
+}
+
+.friend_div {
+	background-color: #f8f8f8f2;
+	display: block;
+}
+
+.fris_div {
+	background-color: #f8f8f8f2;
+	display: none;
+}
+
+.group {
+	width: 100%;
+	height: 50px;
+}
+
+.group i {
+	font-size: 24px;
+	color: gray;
+}
+
+.group>li {
+	width: 33.33333%;
+	height: 100%;
+	float: left;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	align-items: center;
+	border-bottom: 2px solid #dcdcdc61;
+}
+
+.group>li:nth-of-type(2) {
+	border-bottom: 2px solid #39aeca61;
+}
+
+.group i:hover {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.add_fri {
+	padding: 0 10px;
+	border-bottom: 1px #dcdcdc52 solid;
+	overflow: hidden;
+}
+
+.add_fri i {
+	float: right;
+	font-size: 24px;
+	color: gray;
+}
+
+.add_fri i:hover {
+	color: black;
+}
+
+.friendList {
+	width: 100%;
+	height: 330px;
+	overflow: auto;
+}
+
+.friendList>li {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	position: relative;
+}
+
+.friendList>li:hover {
+	background-color: #cbcbcbe3;
+}
+
+.fri_tx {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: wheat;
+	float: left;
+}
+
+.fri_tx>img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.fri_info {
+	float: left;
+	margin-left: 10px;
+}
+
+.fri_info p {
+	display: block;
+}
+
+.fri_name {
+	max-width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.fri_qm {
+	max-width: 200px;
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.friLi{
+	position: relative;
+}
+
+.add_chat .promptMsg{
+	right: 5px;
+}
+
+.promptMsg{
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	color: white;
+	font-size: 10px;
+	background-color: #ff0000c4;
+	border-radius: 50%;	
+	right: 0px;
+	display: none;
+}
+
+.promptMsg p{
+	width: 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: center;
+}
+
+/* 尾部 */
+.footer {
+	width: 100%;
+	height: 60px;
+	background-color: gainsboro;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.footer i {
+	color: gray;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.footer i:hover {
+	color: rgba(0, 0, 0, .8);
+}
+
+/* 聊天框 */
+
+.chat {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	overflow: hidden;
+	height: auto;
+	box-shadow: 0px 4px 9px 5px rgba(66, 66, 66, .5);
+	width: 820px;
+	display: none;
+}
+
+.chat>div {
+	float: left;
+}
+
+.chat>ul {
+	float: left;
+}
+
+/* 聊天人数 */
+.add_chat {
+	width: 170px;
+	height: 550px;
+	/* background-color: rgb(217,217,217); */
+}
+
+.add_chat>li {
+	height: 50px;
+	background-color: #80808047;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 2px;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.add_chat>li:hover {
+	background-color: #80808082;
+}
+
+.add_chat>li:hover i {
+	display: block;
+}
+
+.add_chat>li>div {
+	float: left;
+}
+
+.add_chat .add_chat_tx {
+	width: 40px;
+	height: 40px;
+}
+
+.add_chat_nickName {
+	width: 100px;
+	margin-left: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.add_chat_nickName>p {
+	display: inline-block;
+	width: 80px;
+	font-size: 14px;
+	/* background: salmon; */
+}
+
+.add_chat_nickName>i {
+	display: none;
+}
+
+.add_chat_nickName>i:hover {
+	color: gainsboro;
+}
+
+.chat_box {
+	width: 650px;
+	height: 550px;
+	background-color: white;
+	/* border-radius: 10px; */
+	overflow: hidden;
+}
+
+/* 聊天框头部 */
+.chat_top {
+	width: 100%;
+	height: 80px;
+	background-color: #f1f1f1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+}
+
+.chat_tx {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 50%;
+	float: left;
+}
+
+.chat_tx>img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.chat_nick {
+	float: left;
+	margin-left: 20px;
+	font-family: "楷体";
+}
+
+.chat_menu {
+	float: right;
+	transform: translateY(-10px);
+}
+
+.chat_menu i {
+	margin-left: 5px;
+	cursor: pointer;
+	color: black;
+}
+
+.chat_menu i:hover {
+	color: gray;
+}
+
+/* 聊天内容区 */
+.chat_mid {
+	height: 300px;
+	padding: 5px 10px;
+	padding-right: 0px;
+}
+
+.chat_ul {
+	max-height: 285px;
+	overflow-y: scroll;
+	transition: 10s ease;
+}
+
+.chat_ul>li {
+	min-height: 60px;
+	margin-bottom: 10px;
+}
+
+.chat_friend_info {
+	overflow: hidden;
+}
+
+.chat_friend_info>div {
+	float: left;
+}
+
+.chat_time {
+	color: gray;
+	text-align: center;
+}
+
+.chat_info_tx {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.chat_info_tx>img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.fri_chat_info {
+	word-wrap: break-word;
+	margin-left: 20px;
+}
+
+.chating_info {
+	/* height: 100px; */
+	display: inline-block;
+	background-color: sandybrown;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+/* 自己聊天信息的样式 */
+.my_info {
+	overflow: hidden;
+}
+
+.my_info .fri_chat_info{
+	background-color: salmon;
+}
+
+.my_info>div {
+	float: right;
+}
+
+.my_info>div>div {
+	float: right;
+}
+
+.my_info>.chat_friend_info>.chat_info_tx {
+	margin-left: 20px;
+}
+
+.my_info .fri_chat_info {
+	margin: 0;
+}
+
+/* 聊天输入区 */
+.chat_bottom {
+	height: 170px;
+	border-top: 1px gainsboro solid;
+}
+
+.chat_write {
+	height: 120px;
+	background-color: white;
+}
+
+.chat_write_menu {
+	height: 30px;
+	display: flex;
+	padding: 0 10px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.chat_write_menu i {
+	display: inline-block;
+	font-size: 25px;
+	color: gray;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.chat_write_menu_left i {
+	margin-left: 10px;
+}
+
+.chat_write_menu i:hover {
+	color: black;
+}
+
+.chat_text {
+	display: block;
+	width: 100%;
+	padding: 0 10px;
+	height: 90px;
+	line-height: 20px;
+	border: none;
+	overflow: auto;
+	resize: none;
+	background: 0 0;
+	outline: none;
+}
+
+.chat_bottom_menu {
+	background-color: white;
+	padding: 5px 20px;
+	border-top: 1px solid gainsboro;
+}
+
+.chat_bottom_menu button {
+	width: 100px;
+	height: 40px;
+	background-color: #42BBEB;
+	border-radius: 5px;
+	color: wheat;
+	border: none;
+	outline: none;
+	float: right;
+	cursor: pointer;
+}
+
+.chat_bottom_menu>button:hover {
+	background-color: #0A656B;
+}
+
+.chat_bottom_menu button:nth-of-type(2) {
+	margin-right: 20px;
+}
+
+.kk_logo {
+	position: absolute;
+	bottom: 0;
+	right: 5%;
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+	background-color: #0a656b;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	box-shadow: 0px 4px 9px 5px rgba(66, 66, 66, .5);
+	opacity: 0;
+}
+
+.kk_logo:hover {
+	background-color: #0d7f86;
+}
+
+.kk_logo i {
+	font-size: 32px;
+	color: #c7ad39;
+}
+
+.add_friend {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	padding-top: 10px;
+	background-color: white;
+	z-index: 10;
+	box-shadow: 0px 4px 9px 5px rgba(66, 66, 66, .5);
+	display: none;
+}
+
+.add_friend_menu {
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.add_friend_menu>span {
+	color: gray;
+}
+
+.add_friend_menu i {
+	float: right;
+	color: gray;
+	cursor: pointer;
+}
+
+.add_friend_menu i:hover {
+	color: rgba(0, 0, 0, .7);
+}
+
+.add_friend input {
+	width: 300px;
+	height: 30px;
+	border: 1px solid gainsboro;
+	/* outline: none; */
+	padding: 0 10px;
+}
+
+.add_friend button {
+	width: 80px;
+	height: 30px;
+	border: none;
+	outline: none;
+	padding: 0 20px;
+	background-color: #42bbeb;
+	vertical-align: middle;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-left: 10px;
+	color: white;
+}
+
+.add_friend button:hover {
+	background-color: #399cc4;
+}
+
+/* 处理好友申请消息 */
+.Message_box {
+	width: 600px;
+	height: 500px;
+	position: absolute;
+	background-color: white;
+	color: gray;
+	z-index: 10;
+	box-shadow: 0px 4px 9px 5px rgba(66, 66, 66, .5);
+	display: none;
+}
+
+.Message_header {
+	padding: 10px;
+	height: 50px;
+	background-color: rgb(241, 241, 241);
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+}
+
+.Message_box_menu i:hover {
+	color: black;
+	cursor: pointer;
+}
+
+.Message_body_ul {
+	width: 100%;
+	max-height: 423px;
+}
+
+.Message_body_ul>li {
+	height: 70px;
+	border-bottom: 1px solid gainsboro;
+	padding: 10px;
+	position: relative;
+}
+
+.Message_body_ul>li>div {
+	float: left;
+}
+
+.Message_info {
+	overflow: hidden;
+}
+
+.Message_tx {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.Message_tx>img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.Message_info>div {
+	float: left;
+	height: 50px;
+}
+
+.Message_nick {
+	margin-left: 20px;
+}
+
+.Message_nick>p {
+	width: 130px;
+	cursor: pointer;
+}
+
+.Message_nick>p:hover {
+	color: rgb(0, 0, 0);
+}
+
+.Message_time {
+	margin-left: 10px;
+}
+
+.Message_body>ul>li>.Message_processing {
+	float: right;
+	width: 170px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.Message_processing>.btn {
+	width: 80px;
+}
+
+.Message_processing>.btn:hover {
+	background-color: #0A656B;
+}
+
+.Message_footer>p {
+	text-align: center;
+}
+
+.Message_body>ul>li>.agree {
+	float: right;
+	line-height: 50px;
+	margin-right: 20px;
+	display: none;
+}
+
+.mes {
+	position: absolute;
+	background-color: rgba(0, 0, 0, .6);
+	color: white;
+	padding: 20px 10px;
+	border-radius: 5px;
+	/* opacity: 0; */
+	display: none;
+	z-index: 999;
+}
+
+/* 右键删除 */
+menu {
+	display: none;
+	z-index: 666;
+}
+
+.menu_ul {
+	width: 80px;
+	height: 60px;
+	background-color: whitesmoke;
+	border-radius: 2px;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .1);
+	overflow: hidden;
+	position: absolute;
+}
+
+.menu_ul>li {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-bottom: 1px solid rgba(50, 50, 50, .5);
+	color: gray;
+	box-sizing: border-box;
+	padding: 0 20px;
+}
+
+.menu_ul>li:hover {
+	background-color: grey;
+	color: white;
+}
+
+/* 搜索用户 */
+.searchFriend{
+	width: 450px;
+	position: absolute;
+	background: white;
+	padding: 10px 0;
+	box-shadow: 0px 4px 9px 5px rgba(66, 66, 66, .5);
+	display: none;
+}
+
+.searchFriend>div{
+	padding: 0 15px;
+}
+
+.search_ul>li{
+	padding: 5px 15px;
+}
+
+.search_ul>li:hover{
+	background-color: #cbcbcbe3;
+}
+
+.search_menu{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.search_menu_box{
+	float: right;
+}
+
+.search_head{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+
+.search_head .btn:hover{
+	background-color: #399CC4;
+	color: white;
+}
+
+.searchFriend input{
+	width: 300px;
+	height: 40px;
+	padding-left: 10px;
+}
+
+.Message_info p{
+	max-width: 130px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* 皮肤盒子 */
+.skin{
+	position: absolute;
+	width: 350px;
+	background-color: white;
+	box-shadow: 0px 4px 9px 5px rgba(66, 66, 66, .5);
+	padding: 10px;
+	padding-bottom: 20px;
+	display: none;
+}
+
+.skin_menu{
+	width: 100%;
+	overflow: hidden;
+}
+
+.skin_menu i:hover{
+	color: black;
+}
+
+.skin input{
+	margin: 0 5px;
+}
+
+.skin button:hover{
+	background-color: #399CC4;
+}
+
+.show_skin{
+	width: 50px;
+	height: 50px;
+	border: 1px solid gray;
+	margin: 10px auto;
+}
+
+.show_skin1{
+	background-color: #d9d2c0bd;
+}
+
+.show_skin2{
+	background-color: #FA8072;
+}
+
+.pub_color{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+}
+
+.chat_color{
+	margin-bottom: 50px;
+}
+
+
+/* 滚动条 */
+::-webkit-scrollbar {
+	width: 16px;
+	height: 18px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+	border-radius: 999px;
+	border: 5px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2) transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	min-height: 20px;
+	background-clip: content-box;
+	box-shadow: 0 0 0 5px rgb(255, 255, 255) inset;
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+/* 消息闪动的类 */
+.tz {
+	animation: tz 1s infinite;
+}
+
+@-webkit-keyframes tz {
+	from {
+		background-color: #cbcbcbe3;
+	}
+
+	to {
+		background-color: white;
+	}
+}
+
+

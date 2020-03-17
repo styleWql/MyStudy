@@ -1,0 +1,138 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #F6F5F6;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  
+  }
+  a {
+    color: #00B7FF;
+  }
+  .w-24{
+    width: 24%;
+  }
+  .main img{
+    height: 200px;
+  }
+  #listbox{
+    /* align-content: flex-start; */
+  }
+  #listbox:after{
+    width: 24%;
+    content: "";
+  }
+  .main{
+    width: 1280px;
+    margin: 0 auto;
+  }
+  .main img {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+  }
+  nav{
+    width: 700px;
+    margin: 20px auto;
+    margin-left: calc(50% - 225px);
+  }
+  .card-img {
+    width: 80%;
+  }
+  .mll{
+    margin-left: 4.6rem !important;
+  }
+  .marketing .col-lg-3 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    /* margin-right: 2px; */
+  }
+  .col-lg-3 {
+    -ms-flex: 0 0 23%;
+    flex: 0 0 23%;
+    max-width: 23%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .search{
+    width: 300px;
+    height: 40px;
+    margin: 0 800px;
+  }
+  .search input{
+    width: 200px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  .type span{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 9;
+    background-color: #D8D8D8;
+    color: #888;
+  }
+  .type span:hover{
+    color: white;
+    background-color: rgb(95,170,254);
+  }
+  .type span:hover{
+    color: white;
+    background-color: rgb(95,170,254);
+  }
+  .type div{
+    font-size: 18px;
+  }
+  .online{
+    width: 1120px;
+    margin: 5px auto;
+  }
+  .city{
+    width: 502px;
+    height: 202px;
+    position: absolute;
+    left: 426px;
+    top: 110px;
+    z-index: 9;
+    display: none;
+  }
+  .type .current{
+    color: white;
+    background-color: rgb(95,170,254);
+  
+  }
+  .type .current1{
+    display: block;
+  }
+  .type h5{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 9;
+    background-color: #D8D8D8;
+    color: #888;
+  }
+  .con_item{
+    background-color: white;
+  }
+  .con_item:hover{
+    /* box-shadow: 0px -0.2px 4px 0px rgba(194, 194, 194, 0.404),
+                   0px 1px 4px 3px rgba(194, 194, 194, 0.404),
+                -0.2px 0px 4px 0px rgba(194, 194, 194, 0.404),
+                   1px 0px 4px 3px rgba(194, 194, 194, 0.404); */
+                   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }

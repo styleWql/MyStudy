@@ -1,0 +1,20 @@
+<!-- 电影组件 -->
+<view class="nowPlayingFilm-item">
+  <image src="{{film.poster}}"></image>
+  <view class="nowPlayingFilm-info">
+    <view>
+      <text class="wrapP title">{{film.title}}</text>
+    </view>
+    <view>
+      <text class="wrapP"><text>观众评分</text>
+      <text class="score"> {{film.grade?film.grade:"暂无"}}</text></text>
+    </view>
+    <view>
+      <text class="wrapP">主演：<text>{{film.actor}}</text></text>
+    </view>
+    <view>
+      <text class="wrapP">{{film.category}}</text>
+    </view>
+  </view>
+  <button size="mini" plain catchtap="handleBuy"><text class="btnp">购票</text></button>
+</view>

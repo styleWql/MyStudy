@@ -1,0 +1,38 @@
+<!-- 头像 -->
+<view class="header">
+  <view class="avatar" data-enter-time="1583589364">
+    <image src="{{avatarUrl}}" class="avator-icon"></image>
+    <view class="nick-name">{{userInfo.nickName}}</view>
+  </view>
+</view>
+
+
+<view class="content">
+  <!-- 订单列表 -->
+  <view class="my-order-tab">
+    <view>
+      <image src="/public/image/icon/filmOrder.png"></image>
+      <span class="mint-badge is-primary is-size-small" style="display: none;">0</span>
+      <view class="common-p">电影订单</view>
+    </view>
+    <view>
+      <image src="/public/image/icon/goodsOrder.png"></image>
+      <view class="common-p ">商品订单</view>
+    </view>
+  </view>
+
+  <!-- 功能列表 -->
+  <view class="funBox ">
+    <view wx:for="{{funList}}" wx:key="id">
+      <view>
+        <image src="{{item.iconPath}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <view>
+        <text wx:if="{{item.money==''}}">￥{{item.money}}.0</text>
+        <image class="kuozhan" src="/public/image/icon/kuozhan.png"></image>
+      </view>
+
+    </view>
+  </view>
+</view>

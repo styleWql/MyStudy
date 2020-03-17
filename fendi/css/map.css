@@ -1,0 +1,151 @@
+.fullScreen{
+	width: 100%;
+	height: auto;
+}
+
+/* 导航宽度 */
+.Nav_center{
+	max-width: 1560px;
+	margin: 0 auto;
+}
+
+/* 主体 页脚宽度 */
+.Cen_center{
+	max-width: 1530px;
+	margin: 0 auto;
+}
+
+/* 弹性垂直居中 */
+.Vertical_centering{
+	display: flex;
+	align-items: center;
+}
+
+/* 弹性水平居中 */
+.Horizontally_centered{
+	display: flex;
+	justify-content: center;
+}
+
+/* 弹性居中 */
+.Centered{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 弹性均匀分布 */
+.Evenly_distributed{
+	display: flex;
+	justify-content: space-around;
+}
+
+/* 弹性两边均匀分布 */
+.Evenly_distributed_two{
+	display: flex;
+	justify-content: space-between;
+}
+
+/* 字体加粗 */
+.font_b{
+	font-weight: bold;
+}
+
+/* map主体 */
+.content{
+	/* background-color: salmon; */
+	overflow: hidden;
+	font-size: 12px;
+	color: #212121;
+	padding-bottom: 135px;
+	border-bottom: 1px solid #eeedeb;
+	box-sizing: border-box;
+}
+
+.map_text{
+	margin: 60px 120px 30px;
+	overflow: hidden;
+	height: 171px;
+}
+
+.map_text>ul{
+	height: inherit;
+}
+
+.map_text>ul>li{
+	display: inline-block;
+	float: left;
+}
+
+.map_text_one{
+	font-size: 14px;
+	padding-left: 62px;
+	border: 1px solid #eeedeb;
+	box-sizing: border-box;
+	width: 51.8%;
+}
+
+.map_text_one i{
+	font-size: 14px;
+	padding-right: 10px;
+}
+
+.map_text_one_ul>li:nth-of-type(1){
+	font-size: 16px;
+	padding: 40px 0 20px 24px;
+}
+
+.map_text_one_ul>li:nth-of-type(2){
+	padding-bottom: 10px;
+	padding-right: 5px;
+}
+
+.map_text_one_ul>li:nth-of-type(3){
+	padding-bottom: 30px;
+}
+
+.map_text_two{
+	margin-left: 42px;
+	width: 21.2%;
+	height: inherit;
+	
+}
+
+.map_text_two_ul i{
+	padding-right: 10px;
+}
+
+.map_text_two_ul>li:nth-of-type(1){
+	padding-bottom: 20px;
+}
+
+.map_text_two_ul>li:nth-of-type(2){
+	padding-left: 26px;
+}
+
+.map_text>ul>.map_text_three{
+	margin-left: 35px;
+	width: 20%;
+	border-left: 1px solid #eeedeb;
+	box-sizing: border-box;
+}
+
+.map_text>ul>.map_text_three li{
+	padding-left: 42px;
+}
+
+.map_text>ul>.map_text_three li:nth-of-type(2){
+	padding-left: 68px;
+}
+
+.map_img{
+	margin: 0 120px;
+}
+
+.map_img img{
+	width: 100%;
+}
+
+.map_img img:hover{
+	cursor: move;
+}

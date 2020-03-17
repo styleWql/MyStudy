@@ -1,0 +1,5 @@
+/* public/template/header.wxss */
+.header{
+  background: deeppink;
+  color: sandybrown
+}

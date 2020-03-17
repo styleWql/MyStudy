@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <link rel='stylesheet' href='/stylesheets/detail.css' />
+  <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+  <link rel='stylesheet' href='stylesheets/style.css' />
+  <link rel='stylesheet' href='stylesheets/index.css' />
+</head>
+<style>
+  #img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+  }
+  .line {
+    height: 500px;
+  }
+  #big_box{
+  width: 1000px;
+  height: 500px;
+  overflow: hidden;
+}
+
+</style>
+
+<body>
+  <% include template/header.ejs%>
+  <!-- <div class="container-sm border border-primary">100% wide until small breakpoint</div> -->
+  <div class="container border z_border"  style="padding: 0px;  border: 0px solid #dee2e6 !important;">
+  <div id="main">
+
+<!-- 
+
+  这里放的是那四张详情图片
+
+ -->
+
+
+  </div>
+  
+
+    <div class="comment">
+      <div class="reviewbox">
+       <span></span>  <span>  评论  </span><span id="review"> 0</span>
+      </div>
+      <!-- 发布 -->
+      <div class="release">
+        <img class="h_img" id="h_img" src=" " alt="">
+        <!-- <img class="h_img" src="/detail_img/005.jpg" alt=""> -->
+        <!-- <input class="put_box" type="text"> -->
+        <textarea id="t_area" class="put_box" name="" id="" cols="30" rows="10">
+
+        </textarea>
+        <!-- 上传图片 -->
+        <div id="line">
+          <div class="cover"> 上传图片 </div>
+          <input id="file" type="file" name="" id="file">
+          <button id="z_btn" onclick="doUpload()">提交</button>
+        </div>
+        <!-- 上传图片完 -->
+        <button id="btn" class="btn btn-primary p_comment">发表评论</button>
+      </div>
+      <!-- 发布完 -->
+      <div class="com_number">
+
+        <!-- 展示区 -->
+
+      </div>
+      <div id="pageBox"></div>
+
+      <button class="show btn btn-primary btn-lg btn-block" id="z_color"> 显示全部 </button>
+
+      <div class="recommend">
+
+        <span></span>&nbsp;&nbsp;推荐&nbsp;&nbsp;<span></span>
+      </div>
+      <div id="big_box">
+      <div id="listbox" class="row d-flex mt-6 justify-content-between flex-wrap">
+
+      </div> <!-- listbox end -->
+      <% include template/footer.ejs%>
+    </div>
+
+<!-- <img src="/images/1_天坛公园.jpg" alt=""> -->
+
+    </div>
+  </div>
+  </div>
+  <div class="position-fixed div_bot"><img src="/com_img/返回顶部.png" alt=""></div>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script>
+
+    // console.log("这是周业坤的页面",sessionStorage.id); 
+    
+    var box_node = ' '
+    var imgs_src = ' '
+    var nums = 500
+    /* 图片懒加载 */
+
+    /* 加载详情推荐的图片 */
+
+    function many_img(){
+      // console.log("没成功");
+      
+      $.ajax({
+        url: `rend_images.jsp?`, //请求的url地址
+        // dataType:"json", //返回格式为json
+        async: true, //请求是否异步，默认为异步，这也是ajax重要特性
+        data: {
+          "id": "value"
+        }, //参数值
+        type: "GET", //请求方式
+        beforeSend: function () {
+          //请求前的处理
+        },
+        success: function (req) {
+          //请求成功时处理
+          var rend_two = req.data
+
+          $.each(rend_two, function (i, n) {
+            // console.log(n);
+            imgs_src +=(`
+              <div class="card mt-4 " id="z_page" data-id=${n.id} >
+                <img id="list_img" src="" class="" data-id=${n.id} data-src="${n.v_img}" alt="">
+                <div class="card-body z_card" data-id=${n.id}>
+                    <h5 >${n.v_name}</h5>
+                    <p >${n.a_info}</p>
+                    <a href="#" class="btn btn-primary" data-id=${n.id}> 查看详情 </a>
+                </div>
+            </div> 
+            `)
+          })
+          $(listbox).append($(imgs_src))
+          // console.log($(list_img));
+          
+/* 懒加载 */
+
+            var clock; 
+            $(window).on('scroll',function(){
+                if(clock){
+                    clearTimeout(clock);
+                }
+                clock = setTimeout(function(){
+                    start()
+                },200)
+            })
+            function start(){
+                 $('.container img').not('[data-isLoading]').each(function (){
+                    if (isShow($(this))) {
+                        loadImg($(this));
+                    }
+                })
+            }
+            function isShow($node){
+                return $node.offset().top <= $(window).height()+$(window).scrollTop();
+            }
+            function loadImg($img){
+              nums+=185
+                    $img.attr('src', $img.attr('data-src'));
+                    
+                    $img.attr('data-isLoading',1);
+                    $(big_box).css("height",nums)
+            }
+
+/* 懒加载 */
+
+          // console.log($(z_page));
+          /* 放在many里面 */
+    // console.log("这是sssid",sessionStorage.id);
+
+$(z_page).click(function (e) {
+  vid()
+  box_node = ' '
+  
+   sessionStorage.id = e.target.dataset.id //点击时候获取每张图片对应的   v_id
+  //  console.log("这是sessionStorage.id: ",sessionStorage.id);
+  // console.log();
+  four_img()
+
+})
+/* 放在many里面完 */
+          
+        },
+        complete: function () {
+          //请求完成的处理
+        },
+        error: function () {
+          //请求出错处理
+        }
+      });
+
+    }
+
+    many_img()
+
+    /* 加载详情推荐的图片 */
+
+/* ajax 封装 请求那四张图片的 */
+    function vid(){
+      $.ajax({
+        url: `rend_img.jsp?arr=1&num=r&v_id=${sessionStorage.id}`,
+        type: 'GET',
+        success: function (data) {
+          var rend_one = data.data
+          // console.log(rend_one);
+          $.each(rend_one, function (i, n) {
+            if((i+1)%2 ==0){
+              box_node += `
+                <div class="box">
+      <span></span>
+      <div class="text" style="text-align: right;">${n.d_info}</div>
+      <img id="imginfo" src="${n.img_src}" alt="">
+    </div>
+                `
+            }else{
+              box_node += `
+                <div class="box">
+      <span></span>
+      <img id="imginfo" src="${n.img_src}" alt="">
+      <div class="text" style="text-align: right;">${n.d_info}</div>
+    </div>
+                `
+            }
+            window.location.href="http://localhost:3000/detail.html";
+
+          })
+          $(main).html(`${box_node}`)
+
+
+
+        }
+      })
+    }
+
+/* ajax 封装完 请求那四张图片的 */
+
+
+
+/* 渲染详情页面的四张图 */
+
+function four_img(){
+  // console.log(1);
+  box_node = ' '
+  $.ajax({
+        url: `/four_img.jsp?v_id=${sessionStorage.id}`,
+        type: 'GET', // 打成的数据包可以直接通过send发送
+        success: function (data) {
+            var rend_one = data.data
+          // console.log(rend_one);
+          /* 立即渲染四张图 */
+
+          $.each(rend_one, function (i, n) {
+            if((i+1)%2 ==0){
+              box_node += `
+                <div class="box">
+      <span></span>
+      <div class="text" style="text-align: right;">${n.d_info}</div>
+      <img id="imginfo" src="${n.img_src}" alt="">
+    </div>
+                `
+            }else{
+              box_node += `
+                <div class="box">
+      <span></span>
+      <img id="imginfo" src="${n.img_src}" alt="">
+      <div class="text" style="text-align: right;">${n.d_info}</div>
+    </div>
+                `
+            }
+
+          })
+          $(main).html(`${box_node}`)
+          /* 立即渲染四张图 */
+        }
+      })
+}
+four_img()
+
+/* 渲染详情页面的四张图完 */
+
+
+    /* 图片懒加载完 */
+
+
+    let arr = []
+    let str = ''
+    let reply_node_str = ' '
+    let time = " "
+    let num = 0
+    let text = ''
+    var userid = JSON.parse(sessionStorage.userInfo).t_user
+    // var head_src = JSON.parse(sessionStorage.userInfo).t_headimg
+
+    var head_src = sessionStorage.head_str
+
+    // console.log(sessionStorage.head_str);
+    
+    $("#h_img").attr("src", `${head_src}`);
+    // console.log(JSON.parse(sessionStorage.userInfo).t_headimg);
+    
+    
+
+    let page_num = 1
+    let page_count = 6
+    let the_height = 1080
+
+    //渲染评论
+    // $(document).ready(function () {
+    function getListFn() {
+      // let listbox = document.querySelector('#listbox')
+
+      // listbox.innerHTML = ''
+      $.ajax({
+        url: `getRender.jsp?arr=${arr}&time=${time}&page_num=${page_num}&page_count=${page_count}&v_id=${sessionStorage.id}`, //请求的url地址
+        // dataType:"json", //返回格式为json
+        async: true, //请求是否异步，默认为异步，这也是ajax重要特性
+        // data: {
+        //   "id": "value"
+        // }, //参数值
+        // data:{
+        //   'data':data
+        // },
+        type: "GET", //请求方式
+        beforeSend: function () {
+          //请求前的处理
+        },
+        success: function (req) {
+          // console.log(req);
+
+          //请求成功时处理
+          var ren = req.data
+          // console.log(ren);
+          if (req.code == 0) {
+            let node_str = ''
+
+          console.log('这是评论',$(review).html(`${ren.length}`));
+            
+
+          $(".com_number").html(' ')
+          $.each(ren, function (i, n) {
+
+                node_str = `<div class='new'>  
+    <img class="h_img" src="${n.t_headimg}" alt="">
+    <div class="father">
+    <div class="title">${n.t_user}</div>
+    <div class="put_box msg">${n.c_content}</div>
+    <div class="like">
+    <span> ${n.c_time}</span>
+    <span id="heart">💛:<span id='like'>${n.c_likes}</span></span>
+    <span id="Reply">回复</span>
+        
+      </div>
+      </div>
+      </div>
+      
+      `
+              $(".com_number").prepend(node_str)
+
+            });
+            // 渲染分页
+            new Pagination({
+              el: '#pageBox',
+              counter: Math.ceil(req.list_count / page_count),
+              page_num: page_num,
+              callback: function (id) {
+                page_num = id
+                getListFn()
+              }
+            })
+          } else {
+            // console.log('err');
+          }
+        },
+        complete: function () {
+          //请求完成的处理
+        },
+        error: function () {
+          //请求出错处理
+        }
+      });
+      // })
+    }
+    getListFn()
+
+    function parseDom(arg) {
+      var objE = document.createElement("div");
+      objE.innerHTML = arg;
+      return objE.children[0];
+    }
+
+    function Pagination(parmas) {
+      this.el = document.querySelector(parmas.el) // 插件目标节点
+      this.counter = parmas.counter //总页数
+      this.pages = null //根据总页数 生成的 分页 按钮
+      this.callback = parmas.callback || function () {} // 分页按钮点击的 回调函数 可以是 发起 ajax请求
+      // 分页主体 代码 
+      this.wrap = parseDom(`
+                        <nav aria-label="Page navigation example center">
+                        <ul class="pagination _top">
+                            <li class="page-item" ><a id="pri" class="page-link" href="#">上一页</a></li>
+                            <li class="page-item" ><a id="next" class="page-link" href="#">下一页</a></li>
+                        </ul>
+                    </nav>
+    `);
+      this.id = 0
+      this.page_num = parmas.page_num
+      this.init()
+      this.handle()
+    }
+    Pagination.prototype = {
+      constructor: Pagination,
+      init() {
+        // 如果页面没有 主体 结构 才生成 主体 结构  避免每次点击 生成
+        if (!document.querySelector('nav')) {
+          this.el.appendChild(this.wrap)
+        }
+        // 生成 分页 按钮
+        let str = ''
+        for (let i = 1; i <= this.counter; i++) {
+          str = parseDom(`<li class="page-item"><a id="pgid" class="page-link" href="#" data-id=${i} >${i}</a></li>
+            `)
+          // console.log(str);
+          if (document.querySelector('.pagination').children.length <= this.counter + 1) {
+            document.querySelector('.pagination').insertBefore(str, document.querySelector(
+              '.pagination li:last-child'))
+          }
+        }
+      },
+      handle() {
+        // 绑定事件
+        this.el.addEventListener('click', function (e) {
+          e.preventDefault();
+          // console.dir(e.target);
+
+          if (e.target.id == "next") { //下一页
+            // this.id = this.page_num+1
+            // console.log(this.counter);
+
+            // if(this.id>this.counter){//上一页
+            //   console.log('bigbig');
+
+            //   this.id=this.counter
+            // }
+            // this.callback(this.id)
+          } else if (e.target.id == "pri") {
+            // this.id = this.page_num-1
+            // if(this.id<0){
+            //   this.id=1
+            // }
+            // this.callback(this.id)
+          } else if (e.target.id == "pgid") {
+            this.id = e.target.dataset.id
+            this.callback(this.id)
+          }
+
+        }.bind(this))
+      }
+    }
+
+    /* 点击显示全部评论 */
+    $(z_color).click(function () {
+      this.remove()
+      $(".com_number").css("height", 1080)
+      $("._top").css("opacity", 1)
+
+    })
+
+
+    /* 放图 */
+    function doUpload() {
+      let file = $('#file').get(0).files[0] //获取上传的
+      // console.log(file);
+
+      let formdata = new FormData()
+      formdata.append('hehe', file) 
+      // console.log(file);       
+      $.ajax({
+        url: 'http://localhost:3000/file/upload',
+        type: 'post',
+        cache: false,
+        data: formdata, // 打成的数据包可以直接通过send发送
+        processData: false,
+        contentType: false,
+        success: function (data) {
+          $(t_area).html(' ')
+          if (data.err == 0) {
+            console.log(data);
+            $(t_area).val(`<img id="img" src="/comment_img${data.img}" alt="">`)
+
+          } else {
+            console.log('上传失败请重试');
+          }
+        }
+      })
+    }
+    /* 放图 */
+    /* 回复 */
+
+    function sendmsg(arr, time, userid) {
+
+      // console.log(v_id);
+      
+
+      $.ajax({
+        url: `getdetail.jsp?arr=${arr}&time=${time}&userid=${userid}&v_id=${sessionStorage.id}&t_headimg=${head_src}`, //请求的url地址
+        // dataType:"json", //返回格式为json
+        async: true, //请求是否异步，默认为异步，这也是ajax重要特性
+        data: {
+          "id": "value"
+        }, //参数值
+        type: "GET", //请求方式
+        beforeSend: function () {
+          //请求前的处理
+        },
+        success: function (req) {
+          //请求成功时处理
+          console.log(req);
+        },
+        complete: function () {
+          //请求完成的处理
+        },
+        error: function () {
+          //请求出错处理
+        }
+      });
+    }
+
+
+    /* 回复 */
+
+
+
+    //点击评论
+    $(btn).click(function () {
+      if($("#username") && sessionStorage.userInfo){
+      str = $(t_area).val()
+      arr.push(str)
+      $(t_area).val(" ")
+      time = new Date().toLocaleString()
+      node_str = $(`<div class='new'>  
+      <img class="h_img" src="${head_src}" alt="">
+      <div class="father">
+      <div class="title">${userid}</div>
+      <div class="put_box msg">${str}</div>
+      <div class="like">
+    <span> ${time}</span>
+    <span id="heart">💛 :<span id='like'>0</span></span>
+    <span id="Reply">回复</span>
+    </div>
+    </div>
+    </div>`)
+      sendmsg(arr, time, userid)
+      /*  请求评论完 */
+      $(".com_number").prepend(node_str)
+  }else{
+        window.location.href='login.html'
+    }
+
+    })
+    //点击评论完
+
+
+    // var arr = []
+    /* 发起点赞  */
+    var math = 1
+    $(".com_number").click(function (e) {
+      e.preventDefault()
+ 
+      if (e.target.id == "heart") {
+        // console.log($(e.target).children().html());
+        var sstr = $(e.target).parent().prev().text()
+        // let userid = parseInt($(e.target).parent().prev().prev().html())
+        var htmlarr = e.target.innerHTML
+        htmlarr = htmlarr.split(":")
+        // console.log(htmlarr);
+        // let userid = 123
+        let num = parseInt($(e.target).children().html())
+        // if(userid = 4 )
+        e.target.innerHTML = `❤:${htmlarr[1]}`
+        if (htmlarr[0] == "💛") {
+          num++
+        }
+
+        $(e.target).children().html(`${num}`)
+        // console.log(userid);
+        // console.log(sstr);
+
+        /* 发起点赞  */
+
+        $.ajax({
+          url: `getlikes.jsp?num=${num}&sstr=${sstr}&userid=${userid}`, //请求的url地址
+          // dataType:"json", //返回格式为json
+          async: true, //请求是否异步，默认为异步，这也是ajax重要特性
+          data: {
+            "id": "value"
+          }, //参数值
+          type: "GET", //请求方式
+          beforeSend: function () {
+            //请求前的处理
+          },
+          success: function (req) {
+            //请求成功时处理
+            // console.log(req);
+            // console.log(req);
+            
+            // console.log(req.data_inner_two.length);
+            // if(req.data_inner_two.length>1){
+            //   alert`你不可以评论`;
+            // }
+          },
+          complete: function (req) {
+            //请求完成的处理
+            // console.log(req);
+
+          },
+          error: function () {
+            //请求出错处理
+          }
+        });
+        /* 发起点赞结束  */
+      }
+      if (e.target.id == "Reply") {
+        /* 点击出现回复框 */
+        var str = parseDom(` <div id="reply_box">这是一个新的div</div>`)
+        var newstr = parseDom(`
+        <div class="release reply_release" id="release">
+        <img class="h_img" src="${head_src}" alt="">
+        <!-- <input class="put_box" type="text"> -->
+        <textarea id="z_area" class="put_box" name="" id="" cols="30" rows="10">
+          
+        </textarea>
+        <!-- 上传图片 -->
+
+        <!-- 上传图片完 -->
+        <button id="an_btn" class="btn btn-primary p_comment">发表评论</button>
+      </div>
+        `)
+        /* 点击出现回复框完 */
+        math++
+        // console.log(math);
+        // arr.push($(newstr))
+        if (math % 2 == 0) {
+          $(newstr).insertAfter($(e.target).parent().parent().parent())
+          // console.log($(".z_file"));
+
+          var username = $(e.target).parent().prev().prev().html()
+          // console.dir(username);
+          $(an_btn).click(function (e) {
+            // var myname = " 周业坤 "
+            // var reply_node = parseDom(`<div id="reply_box"></div>`)
+            // $(reply_node).insertBefore($(release))
+            /* 回复的内容渲染到页面 */
+            text = $(z_area).val()
+            text = `${userid} @${username} ${text}`
+            arr.push(text)
+            // console.log(arr);
+            // str = $(t_area).val()
+            // arr.push(str)
+            // $(t_area).val(" ")
+            time = new Date().toLocaleString()
+            reply_node_str = parseDom(`  <div class='new'>  
+      <img class="h_img" src="${head_src}" alt="">
+      <div class="father">
+      <div class="title">${userid}</div>
+      <div class="put_box msg"> ${text}</div>
+      <div class="like">
+    <span> ${time}</span>
+    <span id="heart">💛 :<span id='like'>0</span></span>
+    <span id="Reply">回复</span>
+    </div>
+    </div>
+    </div>
+                  `)
+            $(reply_node_str).insertBefore($(release))
+
+            // console.log(reply_node_str);
+            $(z_area).val(' ')
+
+            $("reply_box").prepend($("reply_box"))
+            the_height += 200
+            console.log(the_height);
+
+            $(".com_number").css("height", the_height)
+            /* 回复的内容渲染到页面 */
+
+            sendmsg(arr, time, userid)
+            /*  请求评论完 */
+          })
+        } else {
+          $(release).remove()
+        }
+      }
+    })
+  </script>
+
+<script src="/javascript/detailed.js"></script>
+<script src="/javascript/header.js"></script>
+</body>
+
+</html>

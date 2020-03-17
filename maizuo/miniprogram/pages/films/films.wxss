@@ -1,0 +1,44 @@
+.swiperBox{
+  height: 230px;
+  position: relative;
+}
+.swiperBox image{
+  width: 750rpx;
+
+}
+.cityBox{
+  position: absolute;
+  left: 20rpx;
+  top: 18rpx;
+  z-index: 999;
+  padding: 4px 8px;
+  background: #e7e7e740;
+  color: #fff;
+  border-radius: 30rpx
+}
+
+.nav{
+  display: flex;
+  position: relative
+}
+.nav .nav-item{
+  flex: 1;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 14px;
+  color: #191a1b
+}
+.nav .nav-item.active{
+   color: #ff5f16
+}
+
+.nav .ink-bar{
+  position: absolute;
+  width: 112rpx;
+  height: 3rpx;
+  background: #ff5f16;
+  bottom: 0%;
+  left: 17.5%;
+  transition: left 0.3s
+}

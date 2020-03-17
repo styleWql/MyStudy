@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1502303_miiq89qe75.css" />
+	</head>
+	<body>
+		<div class="content">
+			<h1><span><span>k</span>k</span>首页</h1>
+			<div class="main_box">
+				<!-- 头部 -->
+				<div class="header">
+					<div class="move"></div>
+					<div class="header_main">
+						<div class="header_left">
+							<div class="tx"><img src="img/tx/my_tx.jpg"></div>
+							<div class="online"></div>
+						</div>
+						<div class="gx">
+							<p class="uname">用户名</p>
+							<p>个性签名</p>
+						</div>
+						<div class="header_right">
+							<i class="iconfont icon-suoxiao"></i>
+							<i class="iconfont icon-guanbi"></i>
+						</div>
+					</div>
+				</div>
+				<!-- 主体部分 -->
+				<div class="body">
+					<ul class="group">
+						<li><i class="iconfont icon-xinxi"></i></li>
+						<li><i class="iconfont icon-ren1"></i></li>
+						<li><i class="iconfont icon-qun"></i></li>
+					</ul>
+					<div class="body_div">
+						<!-- 当前聊天的类列表 -->
+						<div class="char_div">
+							当前聊天的类列表
+						</div>
+						<!-- 联系人的列表 -->
+						<div class="friend_div">
+
+							<div class="add_fri">
+								<i class="iconfont icon-add"></i>
+							</div>
+							<ul class="friendList">
+								<!-- <li class="${FriendList[index].user_id} friLi" ondblclick="open_chat(${index},${FriendList[index].user_id},$(this))">
+									<div class="fri_tx">
+										<img src="img/tx/tx.jpg" >
+									</div>
+									<div class="fri_info">
+										<p class="fri_name">${FriendList[index].nickname}</p>
+										<p class="fri_qm">${FriendList[index].user_id}</p>
+									</div>
+									<menu>
+										<ul class="menu_ul">
+											<li class="del">删除</li>
+											<li class="cancel">取消</li>
+										</ul>
+									</menu>
+									<div class="promptMsg dis_center">
+										<p>21</p>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+						<!-- 群聊的列表 -->
+						<div class="fris_div">
+							群聊的列表
+						</div>
+					</div>
+				</div>
+				<!-- 尾部 -->
+				<div class="footer">
+					<i class="iconfont icon-soushuo"></i>
+					<i class="iconfont icon-notice"></i>
+					<i class="iconfont icon-add1"></i>
+					<i class="iconfont icon-pifu"></i>
+					<i class="iconfont icon-guanyu"></i>
+				</div>
+			</div>
+
+			<!-- 聊天框 -->
+			<div class="chat">
+				<ul class="add_chat">
+				</ul>
+				<div class="chat_box">
+					<div class="chat_top">
+						<div class="chat_friend">
+							<div class="chat_tx">
+								<img src="img/tx/tx.jpg">
+							</div>
+							<div class="chat_nick">
+								<h2>聊天人的昵称</h2>
+								<p>在线</p>
+							</div>
+						</div>
+						<div class="chat_menu">
+							<span><i class="iconfont icon-suoxiao"></i></span>
+							<span><i class="iconfont icon-fangda"></i></span>
+							<span><i class="iconfont icon-guanbi"></i></span>
+						</div>
+
+					</div>
+					<!-- 聊天内容 -->
+					<div class="chat_mid">
+						<ul class="chat_ul">
+							<!-- <li>
+								<p class="chat_time">时间</p>
+								<div class="chat_friend_info">
+									<div class="chat_info_tx">
+										<img src="img/tx/tx.jpg">
+									</div>
+									<div>
+										<p class="fri_chat_info chating_info">sadsadsaddadasdsasadasdsadsadsadsdassadsadsaddadasdsasadasdsadsadsadsdassadsadsaddadasdsasadasdsadsadsadsdassadsadsaddadasdsasadasdsadsadsadsdas</p>
+									</div>
+								</div>
+							</li>
+							<li class="my_info">
+								<p class="chat_time">时间</p>
+								<div class="chat_friend_info">
+									<div class="chat_info_tx">
+										<img src="img/tx/tx.jpg">
+									</div>
+									<div>
+										<p class="fri_chat_info chating_info">sadsadsaddadasdsasadasdsadsadsadsdas</p>
+									</div>
+								</div>
+							</li> -->
+						</ul>
+					</div>
+					<div class="chat_bottom">
+						<div class="chat_write">
+							<div class="chat_write_menu">
+								<div class="chat_write_menu_left">
+									<i class="iconfont icon-biaoqing"></i>
+									<i class="iconfont icon-14"></i>
+									<i class="iconfont icon-wenjian"></i>
+									<i class="iconfont icon-yuyin"></i>
+									<i class="iconfont icon-1"></i>
+								</div>
+								<i class="iconfont icon-liaotianjilu"></i>
+							</div>
+							<textarea class="chat_text"></textarea>
+						</div>
+						<div class="chat_bottom_menu">
+							<button type="button" class="closeMes">关闭</button>
+							<button type="button" class="sendMes">发送</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 添加好友 -->
+			<div class="add_friend">
+				<div class="add_friend_menu">
+					<span>添加好友</span>
+					<i class="iconfont icon-guanbi"></i>
+				</div>
+				<div class="add_friend_box">
+					<input type="text" name="" id="" value="" placeholder="输入好友id" />
+					<button type="button">添加</button>
+				</div>
+			</div>
+			
+			<!-- logo小盒子 -->
+			<div class="kk_logo">
+				<i class="iconfont icon-k"></i>
+			</div>
+
+			<!-- 消息盒子（接收处理处理好友申请） -->
+			<div class="Message_box posi_center">
+				<div class="Message_header">
+					<p>好友申请</p>
+					<!-- 好友申请菜单 -->
+					<div class="Message_box_menu">
+						<span><i class="iconfont icon-suoxiao"></i></span>
+						<span><i class="iconfont icon-fangda"></i></span>
+						<span><i class="iconfont icon-guanbi"></i></span>
+					</div>
+				</div>
+
+				<div class="Message_body">
+					<ul class="Message_body_ul">
+						<!-- <li>
+							<div class="Message_info">
+								<div class="Message_tx">
+								<img src="img/tx/tx.jpg" >	
+								</div>
+								<div class="Message_nick dis_center">
+									<p>昵称</p>
+									<p>申请加你为好友</p>
+								</div>
+								<div class="Message_time dis_center">
+									<p>time</p>
+								</div>
+							</div>
+							<div class="Message_processing">
+								<button type="button" class="btn">同意</button>
+								<button type="button" class="btn">不同意</button>
+							</div>
+							<div class="agree">
+								<p>已同意</p>
+							</div>
+						</li> -->
+					</ul>
+				</div>
+
+				<div class="Message_footer">
+					<p>暂无更多新消息</p>
+				</div>
+			</div>
+			
+			<!-- 提示窗口 -->
+			<div class="mes posi_center dis_center">
+				<p></p>
+			</div>
+			
+			<!-- 搜索好友 -->
+			<div class="searchFriend posi_center">
+				<div class="Message_box_menu search_menu">
+					<div class="search_menu_box">
+						<span><i class="iconfont icon-suoxiao"></i></span>
+						<span><i class="iconfont icon-guanbi"></i></span>
+					</div>
+				</div>
+				<div class="search_head">
+					<input type="search" placeholder="请输入关键词(用户名或昵称)"/>
+					<button type="button" class="btn">搜索</button>
+				</div>
+				
+				<ul class="search_ul">
+					<!-- <li>
+						<div class="Message_info">
+							<div class="Message_tx">
+							<img src="img/tx/tx.jpg" >	
+							</div>
+							<div class="Message_nick dis_center">
+								<p class="search_nick">昵称:<span></span></p>
+								<p class="search_id">kk(id):</p>
+							</div>
+							<div class="Message_time dis_center">
+								<p class="search_uname">用户名:</p>
+							</div>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+			
+			<!-- 皮肤 -->
+			<div class="skin posi_center">
+				<div class="skin_menu">
+					<div class="search_menu_box">
+						<span><i class="iconfont icon-suoxiao"></i></span>
+						<span><i class="iconfont icon-guanbi"></i></span>
+					</div>
+				</div>
+				<!-- 能看见颜色的盒子 -->
+				<p>用户界面:</p>
+				<div class="show_skin show_skin1">
+					
+				</div>
+				<!-- 颜色选择滑块 -->
+				<!-- 1.聊天框 -->
+				<div class="chat_color pub_color">
+					<div>
+						<div>R:0<input type="range" class="color_range color_range1" max="255" value="0"/>255</div>
+						<div>G:0<input type="range" class="color_range color_range2" max="255" value="0"/>255</div>
+						<div>B:0<input type="range" class="color_range color_range3" max="255" value="0"/>255</div>
+						<div>A:0<input type="range" class="color_range opci1" max="10" value="0"/>1</div>
+					</div>
+					<button type="button" class="btn color_btn1">设置</button>
+				</div>
+				<!-- 2.气泡 -->
+				<p>气泡:</p>
+				<div class="show_skin show_skin2 ">
+					
+				</div>
+				<div class="bubble_color pub_color">
+					<div>
+						<div>R:0<input type="range" class="color_range color_range4" max="255" value="0"/>255</div>
+						<div>G:0<input type="range" class="color_range color_range5" max="255" value="0"/>255</div>
+						<div>B:0<input type="range" class="color_range color_range6" max="255" value="0"/>255</div>
+						<div>A:0<input type="range" class="color_range opci2" max="100" value="0"/>1</div>
+					</div>
+					<button type="button" class="btn color_btn2">设置</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

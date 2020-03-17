@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #fdfcfa;
+
+}
+/* ---------------头部----------------- */
+.fendi-t{
+    
+    max-width: 1530px;
+    /* height: 557px; */
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin-top: 155px;
+}
+.fendi-t ul{
+    max-width: 1580px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+}
+.fendi-t ul li:nth-of-type(1){
+   max-width: 990px;
+    max-height: 557px;
+}
+.fendi-t ul li:nth-of-type(1) img{
+   width: 100%;
+   height: 100%;
+    /* position: relative; */
+}
+
+.fendi-t ul li:nth-of-type(2){
+    width: 540px;
+    height: 557px;
+    /* background: #000; */
+    line-height: 557px;
+    text-align: center;
+    font-size: 22px;
+    position: relative;
+}   
+.fendi-t ul li:nth-of-type(2)::before{
+    content: '';
+    display: inline-block;
+    background: #000;
+    width: 200px;
+    height: 1px;
+    position: absolute;
+    position: absolute;
+    left: -100px;
+    top: 50%;
+}
+
+
+
+/* -------------------------主体------------------ */
+.box{
+    max-width: 1560px;
+    /* height: ; */
+    height:481.5px ;
+    margin: 20px auto;
+    display: flex;
+}
+.box div{
+    width: 25%;
+    height: 100%;
+    /* outline:1px solid rgb(167, 175, 146); */
+    position: relative;
+}
+
+.box div a::before{
+    content: '';
+    display: block;
+    width: 70%;
+    height: 70%;
+    /* background-color: red; */
+    border-left: 1px solid #f9b949;
+    border-bottom: 1px solid #f9b949;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    /* z-index: 1; */
+}
+.box div a::after{
+    content: '';
+    display: block;
+    width: 70%;
+    height: 70%;
+    /* background-color: red; */
+    border-right: 1px solid #f9b949;
+    border-top: 1px solid #f9b949;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+.box div:hover a::before{
+    display: block;
+}
+.box div:hover a::after{
+    display: block;
+}
+.box div a{
+    display: inline-block;
+    /* background-color: rgb(136, 130, 211); */
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+}
+.one-ul{
+    list-style: none;
+}
+/* .one-ul li:nth-of-type(1) img{
+    width: 90%;
+    margin:0 5%;   
+} */
+.one-ul li:nth-of-type(1){
+    position: relative;
+}
+.one-ul li:nth-of-type(1) span{
+    display: inline-block;
+    /* position: absolute; */
+}
+.one-ul li:nth-of-type(1) span:nth-of-type(2) img{
+    /* display: inline-block; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .3s;
+}
+.one:hover li:nth-of-type(1) span:nth-of-type(2) img{
+    opacity: 1;
+}
+.one-ul li:nth-of-type(1) span img{
+    width: 90%;
+    margin:0 5%; 
+}
+
+.one-ul li:nth-of-type(2){
+    font-weight: 600;
+    margin-top: 10px;
+}
+.one-ul li:nth-of-type(3){
+    margin: 10px 0;
+}
+
+/* ----------------底部图片-------------------- */
+.fendi-b{
+    max-width: 1530px;
+    /* height: 557px; */
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+    margin-bottom: 30px;
+}
+.fendi-b ul{
+    list-style: none;
+    display: flex;
+}
+
+.fendi-b ul li:nth-of-type(1) img{
+   width: 100%;
+   height: 100%;
+    /* position: relative; */
+}
+
+.fendi-b ul li:nth-of-type(2){
+    width: 540px;
+    /* height: 557px; */
+    /* background: rgb(160, 132, 132); */
+    /* line-height: 557px; */
+    text-align: center;
+    font-size: 22px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}   
+.fendi-b ul li:nth-of-type(2)::before{
+    content: '';
+    display: inline-block;
+    background: #000;
+    width: 200px;
+    height: 1px;
+    position: absolute;
+    position: absolute;
+    left: -100px;
+    top: 50%;
+}
+.fendi-b ul li:nth-of-type(2) span{
+    display: inline-block;
+    width: 128px;
+    height: 40px;
+    margin: 10px 0;
+    /* outline: 1px solid; */
+}
+.fendi-b ul li:nth-of-type(2) span:nth-of-type(1){
+    padding-top: 20px;
+}
+.fendi-b ul li:nth-of-type(2) span:nth-of-type(2){
+    margin-top: 20px;
+}
+.fendi-b ul li:nth-of-type(2) span:nth-of-type(2) a{
+    display: inline-block;
+    width: 128px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    background-color: #f9b949;
+}
+.fendi-b ul li:nth-of-type(2) span:nth-of-type(2):hover{
+    opacity: .7;
+}
+
+
+
+/* ----------------底线---------------- */
+
+
+.line{
+    max-width: 1560px;
+    height: 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eeedeb;
+  }

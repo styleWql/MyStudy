@@ -1,0 +1,235 @@
+
+
+@media screen and (max-width:760px){
+
+    /* ----------------头部图片---------------- */
+
+
+        .fendi-t{
+            max-width: 743px;
+            height: auto;
+            margin: 0 auto;
+            /* outline: 1px solid; */
+        }
+        .fendi-t ul{
+            display: flex;
+            flex-flow: column;
+        }
+        .fendi-t ul li:nth-of-type(1){
+            max-width: 100%;
+            height: 70%;
+            margin: 0 auto;
+            
+        }
+        .fendi-t ul li:nth-of-type(2){
+            max-width: 718px;
+            height: 74px;
+            margin: 0 auto;
+            line-height: 74px;
+            font-size: 20px;
+            font-weight: 800;
+            position: relative;
+           
+        }
+        .fendi-t ul li:nth-of-type(2)::before{
+            display: none;
+        }
+
+        .fendi-t ul li:nth-of-type(2)::after{
+            content: '';
+            display: block;
+            max-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            z-index: 3;
+            /* position: absolute; */
+            position: relative;
+            top: -95px;
+            left:  250px;
+            background: url(../img/shpping.png) no-repeat  #f9b949;
+            background-size: 50%;
+            background-position: 50% 50%;
+        }
+
+    /* ----------------底部图片---------------- */
+
+    .fendi-b{
+        max-width: 743px;
+        height: auto;
+        margin: 0 auto;
+        /* outline: 1px solid; */
+    }
+
+    .fendi-b ul{
+        display: flex;
+            flex-flow: column;
+    }
+    .fendi-b ul li:nth-of-type(1){
+        max-width: 100%;
+        height: 70%;
+        margin: 0 auto;
+        /* position: relative; */
+        
+    }
+    .fendi-b ul li:nth-of-type(1)::after{
+        content: '';
+        display: block;
+        max-width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 3;
+        /* position: absolute; */
+        position: relative;
+        top: -27px;
+        left: 351px;
+        background: url(../img/shpping.png) no-repeat  #f9b949;
+        background-size: 50%;
+        background-position: 50% 50%;
+    }
+
+
+    .fendi-b ul li:nth-of-type(2){
+        max-width: 718px;
+        height: 133px;
+        margin: 0 auto;
+        line-height: 74px;
+        font-size: 20px;
+        font-weight: 800;
+        position: relative;
+        /* display: flex;
+        flex-flow: column;
+        text-align: center; */
+       
+    }
+    .fendi-b ul li:nth-of-type(2) span {
+        display: inline-block;
+        width: 128px;
+        height: 133px;
+        line-height: normal;
+        margin: -33px 0;
+        /* outline: 1px solid; */
+    }
+    .fendi-b ul li:nth-of-type(2) span:nth-of-type(2) {
+        display: inline-block;
+        width: 743px;
+        height: 40px;
+        line-height: normal;
+        margin: -33px 0;
+        /* outline: 1px solid; */
+    }
+    .fendi-b ul li:nth-of-type(2) span:nth-of-type(2) a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        line-height: 40px;
+        text-decoration: none;
+        color: black;
+        font-size: 12px;
+        background-color: #f9b949;
+    }
+    .fendi-b ul li:nth-of-type(2)::before{
+        display: none;
+    }
+
+
+    /* .fendi-b ul li:nth-of-type(2)::after{
+        content: '';
+        display: block;
+        max-width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 3;
+        position: absolute;
+        position: relative;
+        top: -95px;
+        left:  250px;
+        background: url(../img/shpping.png) no-repeat  #f9b949;
+        background-size: 50%;
+        background-position: 50% 50%;
+    } */
+
+
+        .box{
+            max-width: 760px;
+            height: 890px;
+            display: flow-root;
+        }
+        .box div{
+            width: 50%;
+            height: 50%;
+            /* float: left; */
+        }
+        .one{
+            width: 360px;
+            height: 431px;
+            /* outline:1px solid rgb(167, 175, 146); */
+            
+            float: left;
+        }
+
+}
+@media screen and (max-width:700px){
+    .fendi-b ul li:nth-of-type(1)::after {
+        left: 330px;
+    }
+}
+@media screen and (max-width:553px){
+    .fendi-b ul li:nth-of-type(1)::after {
+        left: 252px;
+    }
+}
+@media screen and (max-width:550px){
+    .fendi-b ul li:nth-of-type(1)::after {
+        left: 252px;
+    }
+}
+@media screen and (max-width:650px){
+    .box{
+        
+        height: 800px;
+        
+    }
+}
+@media screen and (max-width:580px){
+    .box{
+        
+        height: 740px;
+        
+    }
+}
+
+@media screen and (max-width:500px){
+    .fendi-t ul li:nth-of-type(2){
+        width: 507px;
+    }
+    .fendi-t ul li:nth-of-type(2)::after{
+        content: '';
+        display: block;
+        max-width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 3;
+        /* position: absolute; */
+        position: relative;
+        top: -95px;
+        left:  233px;
+        background: url(../img/shpping.png) no-repeat  #f9b949;
+        background-size: 50%;
+        background-position: 50% 50%;
+    }
+
+    .fendi-b ul li:nth-of-type(1)::after {
+        left: 230px;
+    }
+    .fendi-b ul li:nth-of-type(2){
+        width: 506px;
+    }
+
+    .box{
+        
+        height: 700px;
+        
+    }
+
+
+}

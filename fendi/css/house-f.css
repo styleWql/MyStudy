@@ -1,0 +1,343 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* outline: 1px solid; */
+}
+/* <!-- ----------------第一----------------- --> */
+
+.one{
+    max-width: 1530px;
+    height: 644px;
+    margin: 15px auto 30px;
+    margin-top: 190px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.one a{
+    display: block;
+    max-width: 1530px;
+    height: 550px;
+}
+
+.one a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.one h2{
+    display: block;
+    max-width: 1530px;
+    height: 24px;
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 400;
+}
+.one span{
+    display: block;
+    width: 306px;
+    height: 30px;
+    cursor:pointer;
+    text-align: center;
+    background-color: #f9b949;
+    transition: .3s;
+    line-height: 30px;
+    font-size: 12px;
+}
+.one span:hover{
+    opacity: .7;
+}
+
+
+/* <!-- ----------------第二----------------- --> */
+
+.two{
+    max-width: 1530px;
+    /* height: 1123.58px; */
+    margin: 60px auto 30px;  
+}
+
+.two h2{
+    display: block;
+    max-width: 1530px;
+    height: 24px;
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 400;
+}
+.two-ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+.two-ul li:nth-of-type(1){
+    width: 1010px;
+    height: 554.6px;
+}
+.two-ul li:nth-of-type(1) img{
+    width: 100%;
+    height: 100%;
+}
+.two-ul li:nth-of-type(2){
+    width: 520px;
+    height: 220px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.two-ul li:nth-of-type(2) p{
+    display: block;
+    width: 294px;
+    height: 140px;
+    text-align: center;
+    font-weight: 100;
+}
+.two-ul li:nth-of-type(2) span{
+    display: block;
+    width: 203.58px;
+    height: 30px;
+    cursor:pointer;
+    text-align: center;
+    background-color: #f9b949;
+    transition: .3s;
+    line-height: 30px;
+    font-size: 12px;
+}
+.two-ul li:nth-of-type(2) span:hover{
+    opacity: .7;
+}
+/* <!-- ----------------第三----------------- --> */
+.three{
+        max-width: 1530px;
+        /* height: 1123.58px; */
+         margin: 0 auto 30px; 
+         display: flex; 
+}
+.three a:nth-of-type(1){
+    width: 1010px;
+    height: 505px;
+    /* background-color: rgb(113, 211, 203); */
+    position: relative;
+}
+.three a:nth-of-type(1) img{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+
+}
+.three a:nth-of-type(2){
+    width: 490px;
+    height: 249px;
+    background-color: rgb(65, 42, 42);
+    margin-left: 30px;
+}
+.three a:nth-of-type(2) img{
+    width: 100%;
+    height: 100%;
+
+}
+/* <!-- ----------------第四----------------- --> */
+
+#one{
+    height: 670px;
+    margin-top: 30px;
+}
+#one a{
+    height: 540px;
+}
+#one h3{
+    display: block;
+    max-width: 1530px;
+    height: 17px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 0 20px;
+    font-weight: 400;
+}
+/* <!-- ----------------第五----------------- --> */
+
+.five{
+    max-width: 1530px;
+    margin: 0 auto;
+    display: flex;
+    /* justify-content: space-between; */
+}
+.five a{
+    display: block;
+    width: 750px;
+    height: 563px;
+    overflow: hidden;
+}
+.five a img{
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    object-fit: cover;
+}
+.five a:hover img{
+    transform: scale(1.1);
+}
+.five a:nth-of-type(1){
+    background-color:rgb(158, 130, 130);
+}
+.five a:nth-of-type(2){
+    background-color:rgb(204, 68, 68);
+}
+
+.five span{
+    display: block;
+    width: 30px;
+    height: 563px;
+    background-color: #fff;
+}
+/* <!-- ----------------第六----------------- --> */
+.six{
+    max-width: 1530px;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.six div{
+    width: 750px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.six div h2{
+    display: block;
+    max-width: 650px;
+    height: 24px;
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 400;
+    margin: 20px 0 0 0;
+}
+
+.six div p{
+    display: block;
+    max-width: 650px;
+    height: 20px;
+    text-align: center;
+    margin: 20px 0;
+
+    font-weight: 100;
+}
+.six div span{
+    display: block;
+    width: 100px;
+    height: 30px;
+    cursor:pointer;
+    text-align: center;
+    background-color: #f9b949;
+    transition: .3s;
+    line-height: 30px;
+    font-size: 12px;
+}
+.six div span:hover{
+    opacity: .7;
+}
+
+#more{
+    width: 150px;
+}
+/* <!-- ----------------第七----------------- --> */
+
+#seven{
+    font-size: 14px;    
+    margin-bottom: 30px;
+    font-weight: 300;
+    margin-top: 30px;
+
+}
+#seven span{
+    box-sizing: border-box;
+    width: 340px;
+    height: 30px;
+    /* padding: 8px 20px; */
+}
+
+/* -------------------------第八部分----------------- */
+.eight{
+	max-width: 1560px;
+	height: 128px;
+	box-sizing: border-box;
+	margin: 0 auto 30px;
+	/* padding: 30px 0 0;
+	border-top: 1px solid #eeedeb;
+	border-bottom: 1px solid #eeedeb;
+	display: flex;
+    align-items: center;
+    
+	
+}
+.eight div{
+	width: 780px;
+}
+
+.eight div:nth-of-type(1) h3{
+	display: block;
+	max-width: 750px;
+	height: 13px;
+	line-height: 13px;
+	margin: 7px 0;
+	font-size: 12px;
+
+}
+.eight div:nth-of-type(1) span{
+	display: block;
+	max-width: 750px;
+	height: 40px;
+	padding: 0 0 10px;
+	font-size: 12px;
+	border-bottom: 1px solid #000000;
+	line-height: 40px;
+	font-weight: 100;
+}
+
+.eight div:nth-of-type(2){
+	/* background-color: rgb(224, 194, 194); */
+	/* display: flex;
+	align-items: flex-end; */
+}
+
+/* .eight div:nth-of-type(2) h3{
+	display: block;
+	max-width: 750px;
+	height: 13px;
+	line-height: 13px;
+	margin: 7px 0;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 38px;
+}
+.eight div:nth-of-type(2) a{
+	display: block;
+	max-width: 750px;
+	height: 28px;	
+	margin: 0 0 7px;
+	position: relative;
+}
+.eight div:nth-of-type(2) a img{
+	position: absolute;
+	right: 0;
+}  */
+/* ----------------底线---------------- */
+
+
+.line{
+    max-width: 1530px;
+    height: 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eeedeb;
+  }

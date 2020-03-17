@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>帖子详情</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/comm_xq.css">
+    <link rel='stylesheet' href='stylesheets/style.css' />
+    <link rel='stylesheet' href='stylesheets/index.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+</head>
+
+<body>
+    <div class="container content border pt-2 pb-2">
+       <div class="comm_top border-bottom">
+        <h3><%=title%></h3>
+        <a href="/community">返回社区</a>
+       </div>
+        <!-- ================帖子=============== -->
+        <%for(var i=0;i<=data_info[0].length-1;i++){%>
+            <%if(data_info[0][i].a_id==articleId){%>
+        <div class="comm">
+            <!-- 帖子头部 -->
+            <div class="c_head border-bottom mt-3">
+                <!-- 头像 -->
+                <div class="head_img float-left">
+                    <img src="<%for(var w=0;w<=data_info[3].length-1;w++){%>
+                    <%if(data_info[3][w].id==data_info[0][i].a_userid){%>
+                        <%=data_info[3][w].t_headimg%>
+                        " alt="">
+                </div>
+                <!-- 昵称和发帖时间 -->
+                <div class="c_head_main float-left ml-3">
+                    <a href="#"><%=data_info[3][w].t_user%></a>
+                    <%}%>
+                        <%}%>
+                    <p>发帖时间：<span><%=data_info[0][i].a_time%></span></p>
+                </div>
+            </div>
+            <!-- 帖子主内容区 -->
+            <div class="c_content">
+                <!-- 帖子描述区 -->
+                <div class="c_content_text w-100 pt-2">
+                    <p><%=data_info[0][i].a_content%></p>
+                </div>
+                <!-- 帖子图片区 -->
+                <div class="c_content_img d-flex justify-content-center flex-wrap position-relative">
+                    <%for(var m=0;m<=data_info[1].length-1;m++){%>
+                        <%if(data_info[0][i].a_id==data_info[1][m].a_id){%>
+                    <img class="p-3" src="<%=data_info[1][m].a_img%>" alt="">
+                    <%}%>
+                    <%}%>
+                </div>
+                <!-- 评论区 -->
+                <div class="chat">
+                    <!-- 文本编辑区 -->
+                    <textarea class="chat_text w-100 p-2" placeholder="发表一下你的看法~"></textarea>
+                    <div class="chat_btn pb-1">
+                        <div class="float-right d-flex">
+                            <span class="mr-3 float-left">200字</span>
+                            <button type="button" class="mr-1 btn btn-primary float-left btn_chat">评论</button>
+                        </div>
+                    </div>
+                    <!-- 评论消息区 -->
+                    <ul class="chat_friend">
+                        <!-- 评论 -->
+                        <%for(var j=0;j<=data_info[3].length-1;j++){%>
+                            <%for(var k=0;k<=data_info[2].length-1;k++){%>
+                                <%if(data_info[3][j].id==data_info[2][k].a_userid && data_info[2][k].a_id == data_info[0][i].a_id){%>
+                        <li class="border-top pt-2">
+                            <div class="chat_friend_head float-left">
+                                <div class="chat_friend_headImg float-left">
+                                    <img src="<%=data_info[3][j].t_headimg%>" alt="">
+                                </div>
+                                <div class="float-left ml-3">
+                                    <a href="#"><%=data_info[3][j].t_user%></a>
+                                    <p><%=data_info[2][k].c_time%></p>
+                                </div>
+                            </div>
+                            <p class="chat_p float-left ml-5"><%=data_info[2][k].c_content%></pclass="float-left ml-5">
+                        </li>
+                        <%}%>
+                        <%}%>
+                        <%}%>
+                        <%}%>
+                        <%}%>
+                    </ul>
+                    <!-- 返回社区 -->
+                    <div class="chat_more d-flex justify-content-center">
+                        <a href="/community">返回社区</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div id="toast"></div>
+    <div class="position-fixed div_bot"><img src="/com_img/返回顶部.png" alt=""></div>
+    <% include template/footer.ejs%>
+    <script src="/javascript/jquery-3.4.1.js"></script>
+    <script src="/javascript/Toast.js"></script>
+    <script src="/javascript/comm_xq.js"></script>
+    <script src="/javascript/header.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel="stylesheet" href="/stylesheets/community.css">
+    <link rel="stylesheet" href="/stylesheets/myPost.css">
+    <title><%=title%></title>
+</head>
+
+<body>
+    <div class="container border">
+        <div class="border-bottom">
+            <h3><%=title%></h3>
+            <a href="/community">返回社区</a>
+        </div>
+        <!-- 编辑帖子头部 -->
+        <div class="post_head border-bottom mt-3 pb-3">
+            <!-- 头像 -->
+            <div class="post_head_img float-left">
+                <img src="<%for(var i=0;i<data_info[3].length-1;i++){%>
+                <%if(data_info[3][i].id==userid){%>    
+                    <%=data_info[3][i].t_headimg%>
+                    " alt="">
+            </div>
+            <!-- 昵称和发帖时间 -->
+            <div class="post_head_main float-left ml-3">
+                <a href="#"><%=data_info[3][i].t_user%></a>
+                <%if(data_info[3][i].t_sex=='男'){%>
+                <img class="mt-2" src="/com_img/男 (2).png" alt="">
+                <%}else{%>
+                    <img class="mt-2" src="/com_img/女 (2).png" alt="">
+                    <%}%>
+            </div>
+            <%}%>
+            <%}%>
+        </div>
+        <!-- 帖子编辑区 -->
+        <div class="post_content">
+            <textarea class="post_content_text w-100 mt-3" placeholder="一起来聊聊吧~"></textarea>
+            <!-- 帖子操作按钮 -->
+            <div class="post_content_btn border-bottom">
+                <div class="float-left">
+                    <input type="file" name="upload" class="post_file" id="file" multiple="multiple">
+                </div>
+                <div class="float-right">
+                    <span class="mr-3 float-left">200字</span>
+                    <button type="button" class="btn btn-primary postFile">发帖子</button>
+                </div>
+            </div>
+        </div>
+        <h3 class="his p-3">历史帖子</h3>
+        <!-- ================帖子=============== -->
+        <!-- 通过帖子表的长度循环渲染帖子,倒序渲染，这样保证最新的帖子在最前面 -->
+        <% for(var i=data_info[0].length-1;i>=0;i--){%>
+        <%if(data_info[0][i].a_userid==userid){%>
+        <div class="comm" id="<%=data_info[0][i].a_id%>">
+            <!-- 帖子头部 -->
+            <div class="c_head border-bottom mt-3">
+                <!-- 头像 -->
+                <div class="head_img float-left">
+                    <!-- 通过用户的id渲染对应的头像和昵称 -->
+                    <img src="
+                        <%for(var n=0;n<=data_info[3].length-1;n++){%>
+                            <%if(data_info[3][n].id==data_info[0][i].a_userid){%>
+                                <%=data_info[3][n].t_headimg%>
+                        " alt="">
+                </div>
+                <!-- 昵称和发帖时间 -->
+                <div class="c_head_main float-left ml-3">
+                    <a href="#">
+                        <%=data_info[3][n].t_user%>
+                        <%}%>
+                                <%}%>
+                    </a>
+                    <p>发帖时间：<span><%=data_info[0][i].a_time%></span></p>
+                </div>
+            </div>
+            <!-- 帖子主内容区 -->
+            <div class="c_content">
+                <!-- 帖子描述区 -->
+                <div class="c_content_text w-100 pt-2">
+                    <p><%=data_info[0][i].a_content%></p>
+                </div>
+                <!-- 帖子图片区 -->
+                <div class="c_content_img d-flex align-items-start position-relative">
+                    <!-- 通过对应帖子来渲染相应的图片(只渲染3张) -->
+                    <%var imgNum = 0%>
+                    <%for(var g=0;g<=data_info[1].length-1;g++){%>
+                    <%if(data_info[1][g].a_id==data_info[0][i].a_id){%>
+                    <%imgNum++%>
+                    <%if(imgNum<=3){%>
+                    <img class="w-33 pl-3 pr-3 pb-3" src="<%=data_info[1][g].a_img%>" alt="">
+                    <%}%>
+                        <%}%>
+                    <%}%>
+                        <!-- 提示遮罩层 -->
+                        <!-- 如果大于3张图片就会有提示 -->
+                        <% var num=0%>
+                    <%for(var j=0;j<=data_info[1].length-1;j++){%>
+                    <%if(data_info[0][i].a_id==data_info[1][j].a_id){%>
+                    <%num++;%>
+                    <%}%>
+                        <%}%>
+                    <%if(num>3){%>
+                    <div class="c_content_img_zz position-absolute ml-3 p-2">共<span>
+                            <%=num%>
+                        </span>张</div>
+                    <%}%>
+                    </div>
+                    <!-- 查看详情按钮 -->
+                    <div class="c_content_detail d-flex justify-content-center">
+                        <button type="button" class="btn btn-info artInfo" id="<%=i%>">查看详情</button>
+                </div>
+                <!-- 点赞和评论按钮 -->
+                <div class="c_content_operate ">
+                    <div class="c_content_btn float-right">
+                        <img src="/com_img/点赞 (2).png" alt="" class="c_content_btn1 float-left">
+                        <p class="float-left mr-3 ml-1">(<span class="dz_num"><%=data_info[0][i].a_like%></span>)</p>
+                        <img src="/com_img/评 论 (1).png" alt="" class="c_content_btn2 float-left">
+                        <p class="float-left mr-3 ml-1">(<span class="chat_num">
+                                <%var chat_num = 0%>
+                                <%for(var p=0;p<=data_info[3].length-1;p++){%>
+                                <%for(var w=0;w<=data_info[2].length-1;w++){%>
+                                <%if(data_info[3][p].id==data_info[2][w].a_userid && data_info[2][w].a_id == data_info[0][i].a_id){%>
+                                <%chat_num++%>
+                                <%}%>
+                                 <%}%>
+                                <%}%>
+                            <%=chat_num%>
+                            </span>)</p>
+                    </div>
+                </div>
+                <!-- 评论区 -->
+                <div class="chat">
+                    <!-- 文本编辑区 -->
+                    <textarea class="chat_text w-100" placeholder="发表一下你的看法~"></textarea>
+                    <div class="chat_btn pb-1">
+                        <div class="float-right d-flex">
+                            <span class="mr-3 float-left">200字</span>
+                            <button type="button" class="mr-1 btn btn-primary float-left btn_chat">评论</button>
+                        </div>
+                    </div>
+                    <!-- 评论消息区 -->
+                    <ul class="chat_friend">
+                        <!-- 渲染评论者头像、昵称、评论时间、评论 只能渲染<=10条的评论 -->
+                        <%var c_num = 0;%>
+                        <%for(var p=0;p<=data_info[3].length-1;p++){%>
+                        <%for(var w=0;w<=data_info[2].length-1;w++){%>
+                        <%if(data_info[3][p].id==data_info[2][w].a_userid && data_info[2][w].a_id == data_info[0][i].a_id){%>
+                        <%c_num++;%>
+                        <%if(c_num<=10){%>
+                        <li class="border-top pt-2">
+                            <div class="chat_friend_head float-left">
+                                <div class="chat_friend_headImg float-left">
+                                    <img src="<%=data_info[3][p].t_headimg%>" alt="">
+                                </div>
+                                <div class="float-left ml-3">
+                                    <a href="#"><%=data_info[3][p].t_user%></a>
+                                    <p><%=data_info[2][w].c_time%></p>
+                                </div>
+                            </div>
+                            <p class="chat_p float-left ml-5"><%=data_info[2][w].c_content%></pclass="float-left ml-5">
+                        </li>
+                        <%}%>
+                                    <%}%>
+                        <%}%>
+                            <%}%>
+                    </ul>
+                    <!-- 更多评论 -->
+                    <%if(c_num>10){%>
+                    <div class="chat_more d-flex justify-content-center">
+                        <button type="button" class="btn btn-link more_info" id=<%=i%>更多评论</button> </div> <%}%>
+                    </div>
+                </div>
+            </div>
+            <%}%> <%}%> <!-- 提示框 -->
+                                <div id="toast"></div>
+                                <p class="atr_bt">已经到最底咯٩( 'ω' )و ~</p>
+                        </div>
+                        <div class="position-fixed div_bot"><img src="/com_img/返回顶部.png" alt=""></div>
+    </div>
+    <!-- 提示框 -->
+    <div id="toast"></div>
+    <% include template/footer.ejs%>
+    <script src="/javascript/jquery-3.4.1.js"></script>
+    <!-- <script src="/javascript/community.js"></script> -->
+    <script src="/javascript/Toast.js"></script>
+    <script src="/javascript/myPost.js"></script>
+    <script src="/javascript/header.js"></script>
+    <script>
+        //打开对应的帖子详情
+        // (查看详情)
+        $('.artInfo').click(function () {
+            location.href = `comm_xq.html?articleId=${$(this).attr('id')}`
+        })
+        // (更多评论)
+        $('.artInfo').click(function () {
+            location.href = `comm_xq.html?articleId=${$(this).attr('id')}`
+        })
+
+        // 跳转到发帖页面 
+        $('.atr_Post').click(function () {
+            location.href = 'myPost.html';
+        })
+    </script>
+</body>
+</html>

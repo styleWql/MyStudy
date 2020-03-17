@@ -1,0 +1,118 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  
+  }
+  a {
+    color: #00B7FF;
+  }
+  .w-24{
+    width: 24%;
+  }
+  img{
+    height: 200px;
+  }
+  #listbox{
+    /* align-content: flex-start; */
+  }
+  #listbox:after{
+    width: 24%;
+    content: "";
+  }
+  .main{
+    width: 1280px;
+    margin: 0 auto;
+  }
+  img {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+  }
+  nav{
+    width: 300px;
+    margin: 20px auto;
+    margin-left: calc(50% - 100px);
+  }
+  .card-img {
+    width: 80%;
+  }
+  .mll{
+    margin-left: 4.6rem !important;
+  }
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .search{
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+  }
+  .search input{
+    width: 200px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  .type span{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #D8D8D8;
+    color: #888;
+  }
+  .type span:hover{
+    color: white;
+    background-color: rgb(95,170,254);
+  }
+  .type h5:hover{
+    color: white;
+    background-color: rgb(95,170,254);
+  }
+  .type div{
+    font-size: 18px;
+  }
+  .online{
+    width: 1120px;
+    margin: 5px auto;
+  }
+  .city{
+    width: 520px;
+    height: 0;
+    position: relative;
+    left: 162px;
+    z-index: 999;
+    background-color: rgba(250, 234, 234, 0.404);
+    display: none;
+  }
+  .type .current{
+    color: white;
+    background-color: rgb(95,170,254);
+  
+  }
+  .type .current1{
+    display: block;
+  }
+  .type h5{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #D8D8D8;
+    color: #888;
+  }

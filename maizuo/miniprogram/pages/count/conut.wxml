@@ -1,0 +1,1 @@
+<counter num="{{num}}" bind:handleCount="handleCount"></counter>
